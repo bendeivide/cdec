@@ -15,5 +15,7 @@ Estudando ciência dos dados
 
 - [Família tidyverse](https://www.tidyverse.org/)
 
+## Inserindo novas ideias
+
 
 
