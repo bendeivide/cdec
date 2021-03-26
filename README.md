@@ -1,6 +1,12 @@
 # datascience
 Estudando ciência dos dados
 
+## Integrantes
+
+- [Ben Dêivide (DEFIM/UFSJ)](http://bendeivide.github.io)
+- [Gessyca Moreira (Eng. Telecom./UFSJ)]()
+- [Lucas](UFSJ)
+
 ## Ementas para referência
 
 - [Ementa 1](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiDy5HUksfvAhWRHrkGHRThDjEQFjADegQIFBAD&url=https%3A%2F%2Fwww.ime.usp.br%2F~pam%2Fprog_5905.pdf&usg=AOvVaw3Ov8IOktdwSRpN07uJInvK)
@@ -15,7 +21,6 @@ Estudando ciência dos dados
 
 - [Família tidyverse](https://www.tidyverse.org/)
 
-## Inserindo novas ideias
 
 
 
