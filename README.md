@@ -5,8 +5,8 @@ Estudando ciência dos dados
 
 - [Ben Dêivide (DEFIM/UFSJ)](http://bendeivide.github.io)
 - [Gessyca Moreira (Eng. Telecom./UFSJ)]()
-- [Lucas Rebouças/Eng. Civil/UFSJ](https://www.linkedin.com/in/lucasreboucas)
-- [Matheus Fernando](https://www.linkedin.com/in/matheus-fernando-santos-219555b0)
+- [Lucas Rebouças (Eng. Civil/UFSJ)](https://www.linkedin.com/in/lucasreboucas)
+- [Matheus Fernando (Eng. Mec/UFSJ)](https://www.linkedin.com/in/matheus-fernando-santos-219555b0)
 
 ## Ementas para referência
 
