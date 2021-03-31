@@ -22,6 +22,14 @@ Estudando ciência dos dados
 
 - [Família tidyverse](https://www.tidyverse.org/)
 
+# Linguagens de programação
+
+## Linguagem R
+
+## Linguagem Python
+
+# Estudando RMarkdown e Markdown
+
 
 
 
