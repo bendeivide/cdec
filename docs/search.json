@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "Sobre o projeto",
+      "description": "Descrição básica sobre o CDEC\n",
+      "author": [],
+      "contents": "\r\n\r\nContents\r\nIntegrantes\r\nApoio\r\n\r\nIntegrantes\r\nBen Dêivide (DEFIM/UFSJ)\r\nMarcelo Carlos Ribeiro/UFOP\r\nGessyca Moreira (Eng. Telecom./UFSJ)\r\nLucas Rebouças (Eng. Civil/UFSJ)\r\nMatheus Fernando (Eng. Mec/UFSJ)\r\nApoio\r\nUniversidade Federal de São João del-Rei\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-04-02T13:59:20-03:00"
+    },
+    {
+      "path": "apoio.html",
+      "title": "Material de apoio ao CDEC",
+      "author": [],
+      "contents": "\r\n\r\nContents\r\nEmentas para referência\r\nMateriais interessantes\r\nFamília de pacotes a serem estudados\r\nPacotes R\r\n\r\nLinguagens de programação\r\nLinguagem R\r\nLinguagem Python\r\n\r\nEstudando RMarkdown e Markdown\r\n\r\nEmentas para referência\r\nEmenta 1\r\nMateriais interessantes\r\nIntrodução à ciência de dados\r\nData Science with R\r\nFamília de pacotes a serem estudados\r\nPacotes R\r\nFamília tidyverse\r\nLinguagens de programação\r\nLinguagem R\r\nLinguagem Python\r\nEstudando RMarkdown e Markdown\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-04-02T13:59:36-03:00"
+    },
+    {
+      "path": "index.html",
+      "title": "CDEC",
+      "description": "**CDEC** - Ciência dos Dados: Estatística e Computação\n",
+      "author": [],
+      "contents": "\r\n\r\nContents\r\n Objetivo \r\n\r\n\r\n\r\n{\"x\":{\"data\":null,\"type\":\"NULL\",\"container\":\"svg\",\"options\":null,\"script\":\"var d3Script = function(d3, r2d3, data, svg, width, height, options, theme, console) {\\nthis.d3 = d3;\\n\\nsvg = d3.select(svg.node());\\n/* R2D3 Source File:  d3/voronoi/voronoi.js */\\n// !preview r2d3 d3_version = 4\\n\\n// Based on: https://bl.ocks.org/mbostock/4060366\\n// Based on: r2d3 package in gallery\\n\\nsvg.on(\\\"touchmove mousemove\\\", moved);\\n\\nvar sites = d3.range(100)\\n    .map(function(d) { return [Math.random() * width, Math.random() * height]; });\\n\\nvar voronoi = d3.voronoi()\\n    .extent([[-8, -8], [width + 8, height + 8]]);\\n\\nvar polygon = svg.append(\\\"g\\\")\\n    .attr(\\\"class\\\", \\\"polygons\\\")\\n  .selectAll(\\\"path\\\")\\n  .data(voronoi.polygons(sites))\\n  .enter().append(\\\"path\\\")\\n    .call(redrawPolygon);\\n\\nvar link = svg.append(\\\"g\\\")\\n    .attr(\\\"class\\\", \\\"links\\\")\\n  .selectAll(\\\"line\\\")\\n  .data(voronoi.links(sites))\\n  .enter().append(\\\"line\\\")\\n    .call(redrawLink);\\n\\nvar site = svg.append(\\\"g\\\")\\n    .attr(\\\"class\\\", \\\"sites\\\")\\n  .selectAll(\\\"circle\\\")\\n  .data(sites)\\n  .enter().append(\\\"circle\\\")\\n    .attr(\\\"r\\\", 2.5)\\n    .call(redrawSite);\\n\\nfunction moved() {\\n  sites[0] = d3.mouse(this);\\n  redraw();\\n}\\n\\nfunction redraw() {\\n  var diagram = voronoi(sites);\\n  polygon = polygon.data(diagram.polygons()).call(redrawPolygon);\\n  link = link.data(diagram.links()), link.exit().remove();\\n  link = link.enter().append(\\\"line\\\").merge(link).call(redrawLink);\\n  site = site.data(sites).call(redrawSite);\\n}\\n\\nfunction redrawPolygon(polygon) {\\n  polygon\\n      .attr(\\\"d\\\", function(d) { return d ? \\\"M\\\" + d.join(\\\"L\\\") + \\\"Z\\\" : null; });\\n}\\n\\nfunction redrawLink(link) {\\n  link\\n      .attr(\\\"x1\\\", function(d) { return d.source[0]; })\\n      .attr(\\\"y1\\\", function(d) { return d.source[1]; })\\n      .attr(\\\"x2\\\", function(d) { return d.target[0]; })\\n      .attr(\\\"y2\\\", function(d) { return d.target[1]; });\\n}\\n\\nfunction redrawSite(site) {\\n  site\\n      .attr(\\\"cx\\\", function(d) { return d[0]; })\\n      .attr(\\\"cy\\\", function(d) { return d[1]; });\\n}\\n};\",\"style\":\"/* R2D3 Source File:  d3/voronoi/voronoi.css */\\n.links {\\n  stroke: #000;\\n  stroke-opacity: 0.2;\\n}\\n\\n.polygons {\\n  fill: none;\\n  stroke: #000;\\n}\\n\\n.polygons :first-child {\\n  fill: #f00;\\n}\\n\\n.sites {\\n  fill: #000;\\n  stroke: #fff;\\n}\\n\\n.sites :first-child {\\n  fill: #fff;\\n}\",\"version\":4,\"theme\":{\"default\":{\"background\":\"#FFFFFF\",\"foreground\":\"#000000\"},\"runtime\":null},\"useShadow\":true},\"evals\":[],\"jsHooks\":[]}\r\n Objetivo \r\nO Projeto tem o objetivo de ensinar, trocar experiências, acessorar, temas relevantes à Ciência de dados, que nada mais é do que o estudo da Estatística e a Computação. A experiência será extraordinária, e esperamos que todos no grupo apreciem, divulguem e zele por esse projeto, pois acima de tudo o que falamos, propagaremos conhecimento, uma liberdade necessária.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-04-02T13:59:38-03:00"
+    },
+    {
+      "path": "README.html",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ndatascience\r\nEstudando ciência dos dados\r\n\r\nIntegrantes\r\nBen Dêivide (DEFIM/UFSJ)\r\nGessyca Moreira (Eng. Telecom./UFSJ)\r\nLucas Rebouças (Eng. Civil/UFSJ)\r\nMatheus Fernando (Eng. Mec/UFSJ)\r\n\r\n\r\nEmentas para referência\r\nEmenta 1\r\n\r\n\r\nMateriais interessantes\r\nIntrodução à ciência de dados\r\nData Science with R\r\n\r\n\r\nFamília de pacotes a serem estudados\r\n\r\nPacotes R\r\nFamília tidyverse\r\n\r\n\r\n\r\n\r\nLinguagens de programação\r\n\r\nLinguagem R\r\n\r\n\r\nLinguagem Python\r\n\r\n\r\n\r\nEstudando RMarkdown e Markdown\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// add bootstrap table styles to pandoc tables\r\nfunction bootstrapStylePandocTables() {\r\n  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');\r\n}\r\n$(document).ready(function () {\r\n  bootstrapStylePandocTables();\r\n});\r\n\r\n\r\n\r\n$(document).ready(function () {\r\n  window.buildTabsets(\"TOC\");\r\n});\r\n\r\n$(document).ready(function () {\r\n  $('.tabset-dropdown > .nav-tabs > li').click(function () {\r\n    $(this).parent().toggleClass('nav-tabs-open')\r\n  });\r\n});\r\n\r\n  (function () {\r\n    var script = document.createElement(\"script\");\r\n    script.type = \"text/javascript\";\r\n    script.src  = \"https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\";\r\n    document.getElementsByTagName(\"head\")[0].appendChild(script);\r\n  })();\r\n",
+      "last_modified": "2021-04-02T13:59:39-03:00"
+    }
+  ],
+  "collections": []
+}
