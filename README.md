@@ -29,7 +29,7 @@ Estudando ciência dos dados
 ## Linguagem Python
 
 ### Introdução ao Python
-A
+Abc
 
 ### Módulos Python para Data Science
 Python é hoje em dia considerado a linguagem para cientistas de dados, isso se dá pelo fato de ela possuir vários módulos que facilitam a construção do algoritmo além de permitir em alguns casos a utilização de computação em GPU, tornando o processo muito mais rápido. Hoje os principais módulos usados são os seguintes:
