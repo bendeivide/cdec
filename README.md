@@ -4,7 +4,7 @@ Estudando ciência dos dados
 ## Integrantes
 
 - [Ben Dêivide (DEFIM/UFSJ)](http://bendeivide.github.io)
-- [Gessyca Moreira (Eng. Telecom./UFSJ)]()
+- [Gessyca Moreira (Eng. Telecom./UFSJ)](https://www.linkedin.com/in/gessyca-moreira-907041209/)
 - [Lucas Rebouças (Eng. Civil/UFSJ)](https://www.linkedin.com/in/lucasreboucas)
 - [Matheus Fernando (Eng. Mec/UFSJ)](https://www.linkedin.com/in/matheus-fernando-santos-219555b0)
 
@@ -15,6 +15,7 @@ Estudando ciência dos dados
 ## Materiais interessantes
 - [Introdução à ciência de dados](http://www.ime.usp.br/~jmsinger/MAE5755/cdados2020set30.pdf)
 - [Data Science with R](https://r4ds.had.co.nz/)
+- [Visão Geral da Ciência de Dados](https://geessyca.github.io/-studyfiles/)
 
 ## Família de pacotes a serem estudados
 
