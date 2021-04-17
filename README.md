@@ -89,7 +89,7 @@ Exemplos de números de tipo float: 1.20, -13.444, 15.89...
 Os únicos valores possíveis para uma variável booleana são "True" e "False"
 
 
-A função type() pode nos mostrar o tipo de uma variável, enquanto as funções str(), int(), float() e bool() permite fazer os valores transitarem entre diferentes tipos, como pode ser observado nos exemplos abaixo:
+A função type( ) pode nos mostrar o tipo de uma variável, enquanto as funções str( ), int( ), float( ) e bool( ) permite fazer os valores transitarem entre diferentes tipos, como pode ser observado nos exemplos abaixo:
 
 
 **Código**
