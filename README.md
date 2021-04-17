@@ -95,8 +95,11 @@ A função type( ) pode nos mostrar o tipo de uma variável, enquanto as funçõ
 **Código**
 
 a = True
+
 x = 1
+
 y = -3.50
+
 z = "Olá, Mundo!"
 
 print(type(a))
@@ -124,6 +127,7 @@ print(int(y))
 1
 
 -3
+
 
 
 ### Módulos Python para Data Science
