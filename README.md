@@ -36,7 +36,95 @@ Sucintamente, podemos descrever o Python como uma linguagem de programação ope
 
 O Python está disponível para muitos sistemas operacionais, incluindo os populares Linux, Mac OS e Windows. A versão mais recente para seu processador e sistema operacional (SO) pode ser encontrada para download na [página oficial do Python](https://www.python.org/).
 
-Após a instalação, você poderá utilizar a linguagem por meio do seu terminal ou prompt de comando, além do IDLE, o ambiente de desenvolvimento integrado (do inglês, Integrated Development Environment, ou IDE) padrão do Python, criado pelo já citado fundador da linguagem, [Guido Van Rossum](https://gvanrossum.github.io/). A utilização de outros IDE's, além do próprio IDLE, podem tornar a experiência com a linguagem mais didática e/ou dinâmica, porém trata-se uma escolha que fica a critério do estudante/programador. Algumas alternativas de IDE's para programação Python são o [Spyder](https://www.spyder-ide.org/), o [Pycharm](https://www.jetbrains.com/pycharm/download/) e o [RStudio](https://www.rstudio.com/products/rstudio/download/).  
+Após a instalação, você poderá utilizar a linguagem por meio do seu terminal ou prompt de comando, além do IDLE, o ambiente de desenvolvimento integrado (do inglês, Integrated Development Environment, ou IDE) padrão do Python, criado pelo já citado fundador da linguagem, [Guido Van Rossum](https://gvanrossum.github.io/). A utilização de outros IDE's, além do próprio IDLE, podem tornar a experiência com a linguagem mais didática e/ou dinâmica, porém trata-se uma escolha que fica a critério do estudante/programador. Algumas alternativas de IDE's para programação Python são o [Spyder](https://www.spyder-ide.org/), o [Pycharm](https://www.jetbrains.com/pycharm/download/) e o [RStudio](https://www.rstudio.com/products/rstudio/download/). 
+
+### Primeiros comandos no Python
+Com o Python já disponível na sua máquina, é o momento de inaugurar a experiência com a linguagem. Tipicamente, o código mais básico para iniciar os estudos é retornar **"Olá, Mundo!"** na tela.
+
+
+**Código**
+
+Print('Olá, Mundo!')
+
+**Output**
+
+Olá, Mundo!
+
+
+Finalmente, temos nosso primeiro programa no Python! É válido citar que as aspas utilizadas podem ser simples ou duplas.
+
+Para a construção de um código bem estruturado, é importantíssimo adicionar comentários conforme o trabalho avança, garantindo que a leitura do programa fique o mais dinâmica possível, permitindo melhor compreensão e facilitando o ajuste de possíveis erros. 
+
+Por padrão, os comentários no Python são inseridos utilizando o símbolo **#** + 1 espaço + comentário. É recomendável utilizar ao menos **2 espaços** entre a última linha de código e um comentário, conforme o exemplo a seguir.
+
+
+**Código**
+
+var = 'Olá, Mundo!'  # Exemplo de comentário 1
+
+Print(var)  # Exemplo de comentário 2
+
+**Output**
+
+'Olá, Mundo!'
+
+
+Cada código trará suas informações no formato que mais se adeque ao seu objetivo, sendo assim, o Python apresenta diferentes tipos de dados possíveis. Para os primeiros passos, os tipos de dados mais utilizados serão os demonstrados abaixo:
+
+
+* **str:** Dado no formato texto, 'string' representa uma sequência de caracteres
+
+Exemplos de strings: "Olá, Mundo!", "CDEC", "Python"...
+
+* **int:** Dado numérico no formato inteiro (integer)
+
+Exemplos de números de tipo integer: 1, -2, -5, 15...
+
+* **float:** Dado numérico no formato "flutuante", apresentando casas decimais após a parte inteira
+
+Exemplos de números de tipo float: 1.20, -13.444, 15.89...
+
+* **bool:** Dado no formato "booleano", tendo como característica os valores "True" e "False"
+
+Os únicos valores possíveis para uma variável booleana são "True" e "False"
+
+
+A função type() pode nos mostrar o tipo de uma variável, enquanto as funções str(), int(), float() e bool() permite fazer os valores transitarem entre diferentes tipos, como pode ser observado nos exemplos abaixo:
+
+
+**Código**
+
+a = True
+x = 1
+y = -3.50
+z = "Olá, Mundo!"
+
+print(type(a))
+
+print(type(x))
+
+print(type(y))
+
+print(type(z))
+
+print(str(x))
+
+print(int(y))
+
+**Output**
+
+<class 'bool'>
+
+<class 'int'>
+
+<class 'float'>
+
+<class'str'>
+
+1
+
+-3
+
 
 ### Módulos Python para Data Science
 Python é hoje em dia considerado a linguagem para cientistas de dados, isso se dá pelo fato de ela possuir vários módulos que facilitam a construção do algoritmo além de permitir em alguns casos a utilização de computação em GPU, tornando o processo muito mais rápido. Hoje os principais módulos usados são os seguintes:
