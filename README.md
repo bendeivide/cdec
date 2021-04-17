@@ -15,7 +15,7 @@ Estudando ciência dos dados
 ## Materiais interessantes
 - [Introdução à ciência de dados](http://www.ime.usp.br/~jmsinger/MAE5755/cdados2020set30.pdf)
 - [Data Science with R](https://r4ds.had.co.nz/)
-- [Visão Geral da Ciência de Dados](https://geessyca.github.io/-studyfiles/)
+- [Visão Geral da Ciência de Dados](https://geessyca.github.io/VisaoGeralCienciadeDados/#1)
 
 ## Família de pacotes a serem estudados
 
@@ -50,6 +50,6 @@ Python é hoje em dia considerado a linguagem para cientistas de dados, isso se 
 
 # Estudando RMarkdown e Markdown
 
-
+- [Rmarkdown](https://geessyca.github.io/Rmarkdown/#1)
 
 
