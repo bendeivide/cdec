@@ -139,7 +139,57 @@ Python é hoje em dia considerado a linguagem para cientistas de dados, isso se 
 * **Keras:** Keras é uma API desenvolvida para facilitar o desenvolvimento de modelos de machine learning diminuindo o número de ações que o usuário necessita fazer para casos comuns, além de mostrar mensagens de erro claras e que permitem encontrar a causa de forma mais fácil. Keras também possui uma documentação extensa e guias para o desenvolvedor. Hoje em dia é considerado uma das 5 melhores para deep learning.
 * **PyTorch:** Assim como TensorFlow, PyTorch é um módulo Python open source para machine learning. Ele é baseado na biblioteca Torch que também está disponível para C++.
 * **Pandas:** Pandas é uma ferramenta open source essencial para análise de dados em Python. Ele é rápido, flexível e fácil de usar. Com ele é possível fazer a criação e manipulação de Data Frames, além de poder fazer um resumo estatístico do Data Frame com um único comando. 
+### Introdução ao Numpy
+Primeiramente, antes de usar o módulo numpy, é necessário que ele esteja instalado no computador ou virtual environment
+de desenvolvimento. Para isso, assim como quase todos os módulos para Python, podemos fazer essa instalação utilizando o 
+**pip** ou **conda**.
 
+`pip install numpy` ou `conda install numpy`
+
+Agora com o módulo instalado podemos utilizá-lo em código. Para isso precisamos primeiro importar esse módulo da
+seguinte forma:
+```python
+import numpy as np
+```
+Essa é a forma que o módulo numpy é normalmente importado. Esse código nos permite escrever apenas `np` quando formos
+utilizar alguma função Numpy, esse mesmo formato será visto posteriormente.
+
+Numpy contem arrays multidimensionais e matrizes como estrutura de dados. Ele disponibiliza um tipo de dado chamado 
+`ndarray` que como o nome sugere, é um array multidimensional. Esse tipo de dado contém vários métodos para fazer
+operações sobre ele de forma eficiente e facilmente, a maioria das vezes mais rápido que listas nativas do Python. 
+`ndarray` juntamente com Numpy, adicionam estruturas de dados cálculos eficientes com arrays e matrizes e ainda
+disponibilizam uma grande gama de funções matemáticas de alto nível que operam nesses arrays e matrizes.
+
+Para criar um `ndarray` inicializado com todos os indices como 0 ou 1 basta seguir o código abaixo:
+```python
+>>> import numpy as np
+>>> # Inicializa um ndarray com 10 elementos todos com o valor 0
+>>> a = np.zeros(10)
+>>> # Inicializa um ndarray com 10 elementos todos com o valor 1
+>>> b = np.ones(10)
+```
+Para criar um `ndarray` usando uma lista Python é necessário fazer o seguinte:
+```python
+>>> c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> d = np.array(c)  # Também é possível utilizar a lista diretamente como parâmetro
+```
+Os cálculos básicos como soma, subtração, multiplicação e divisão são tão simples quanto as operações de variáveis
+numéricas:
+```python
+>>> e = b + d
+>>> e
+array([ 2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11.])
+>>> e = b - d
+>>> e
+array([ 0., -1., -2., -3., -4., -5., -6., -7., -8., -9.])
+>>> f = e * d
+>>> f
+array([  0.,  -2.,  -6., -12., -20., -30., -42., -56., -72., -90.])
+>>> f = e / d
+>>> f
+array([ 0.        , -0.5       , -0.66666667, -0.75      , -0.8       ,
+       -0.83333333, -0.85714286, -0.875     , -0.88888889, -0.9       ])
+```
 # Estudando RMarkdown e Markdown
 
 - [Rmarkdown](https://geessyca.github.io/Rmarkdown/#1)
