@@ -44,11 +44,11 @@ Com o Python já disponível na sua máquina, é o momento de inaugurar a experi
 
 **Código**
 ```Python
-Print('Olá, Mundo!')
+Print('Ola, Mundo!')
 ```
 **Output**
 ```Python
-Olá, Mundo!
+Ola, Mundo!
 ```
 
 Finalmente, temos nosso primeiro programa no Python! É válido citar que as aspas utilizadas podem ser simples ou duplas.
@@ -59,15 +59,15 @@ Por padrão, os comentários no Python são inseridos utilizando o símbolo **#*
 
 
 **Código**
-
-var = 'Olá, Mundo!'  # Exemplo de comentário 1
+```Python
+var = 'Ola, Mundo!'  # Exemplo de comentário 1
 
 Print(var)  # Exemplo de comentário 2
-
+```
 **Output**
-
-'Olá, Mundo!'
-
+```Python
+'Ola, Mundo!'
+```
 
 Cada código trará suas informações no formato que mais se adeque ao seu objetivo, sendo assim, o Python apresenta diferentes tipos de dados possíveis. Para os primeiros passos, os tipos de dados mais utilizados serão os demonstrados abaixo:
 
@@ -93,7 +93,7 @@ A função type( ) pode nos mostrar o tipo de uma variável, enquanto as funçõ
 
 
 **Código**
-
+```Python
 a = True
 
 x = 1
@@ -113,9 +113,9 @@ print(type(z))
 print(str(x))
 
 print(int(y))
-
+```
 **Output**
-
+``` Python
 <class 'bool'>
 
 <class 'int'>
@@ -127,7 +127,7 @@ print(int(y))
 1
 
 -3
-
+```
 
 
 ### Módulos Python para Data Science
