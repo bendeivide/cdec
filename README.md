@@ -43,13 +43,13 @@ Com o Python já disponível na sua máquina, é o momento de inaugurar a experi
 
 
 **Código**
-
+```Python
 Print('Olá, Mundo!')
-
+```
 **Output**
-
+```Python
 Olá, Mundo!
-
+```
 
 Finalmente, temos nosso primeiro programa no Python! É válido citar que as aspas utilizadas podem ser simples ou duplas.
 
