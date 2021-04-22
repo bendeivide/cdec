@@ -66,7 +66,7 @@ Print(var)  # Exemplo de comentário 2
 ```
 **Output**
 ```Python
-'Ola, Mundo!'
+Ola, Mundo!
 ```
 
 Cada código trará suas informações no formato que mais se adeque ao seu objetivo, sendo assim, o Python apresenta diferentes tipos de dados possíveis. Para os primeiros passos, os tipos de dados mais utilizados serão os demonstrados abaixo:
