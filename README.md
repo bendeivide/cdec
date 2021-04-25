@@ -190,6 +190,81 @@ array([  0.,  -2.,  -6., -12., -20., -30., -42., -56., -72., -90.])
 array([ 0.        , -0.5       , -0.66666667, -0.75      , -0.8       ,
        -0.83333333, -0.85714286, -0.875     , -0.88888889, -0.9       ])
 ```
+Para criar `ndarrays` multidimensionais existem algumas formas, como usar uma lista
+Python multidemensional ou simplesmente iniciar um `ndarray` com valores aleatórios. Esses não são os
+únicos métodos para realizar essa tarefa, mas já é um bom começo para se habituar ao Numpy.
+```python
+>>> # Utilizando Python list
+>>> g = [[1, 2, 3], [4, 5, 6]]
+>>> h = np.array(g)
+>>> h
+array([[1, 2, 3],
+       [4, 5, 6]])
+>>> # Inicializando com método empty.
+>>> h = np.empty((2, 2))
+>>> h
+array([[1.5711153e-316, 0.0000000e+000],
+       [0.0000000e+000, 0.0000000e+000]])
+```
+
+As mesmas regras de operações entre matrizes também são aplicadas aos `ndarrays`, ou seja,
+se tivermos uma matriz 2x2 e tentarmos multiplicar por um vetor de tamanho 3 teremos um erro no código
+e o programa irá levantar uma exceção.
+
+```python
+>>> h = np.empty((2, 2))
+>>> a = np.random.rand(2)  # Inicializa um vetor de tamanho 2 com números aleatórios
+>>> a
+array([0.22500409, 0.32657332])
+>>> a * h  # Operação com sucesso
+array([[3.535074e-317, 0.000000e+000],
+       [0.000000e+000, 0.000000e+000]])
+>>> a = np.random.rand(3)  # Vetor agora com 3 números aleatórios
+>>> a * h  # Essa operação gera erro
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/code.py", line 90, in runcode
+    exec(code, self.locals)
+  File "<input>", line 1, in <module>
+ValueError: operands could not be broadcast together with shapes (3,) (2,2) 
+
+```
+
+Como podemos ver pelo erro, a operação não foi sucedida pelo fato de não terem formatos compatíveis.
+
+Agora que sabemos como inicializar `ndarrays` e fazer operações com eles, ainda precisamos saber como
+acessar os valores dentro destes `ndarrays`. Para isso, utilizamos uma sintaxe muito parecida com a nativa do Python.
+
+```python
+import numpy as np
+
+>>> a = np.arange(10)  # Inicia um ndarray de 0 a 9
+>>> a
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> # Acessando um único valor
+>>> a[2]
+2
+>>> # Acessando o último valor
+>>> a[-1]
+9
+>>> # Criando um slice, ou corte, do ndarray de 0 a 2
+>>> a[:3]
+array([0, 1, 2])
+>>> # Criando um slice, ou corte, do ndarray de 3 a 9
+>>> a[3:]
+array([3, 4, 5, 6, 7, 8, 9])
+>>> # Criando um slice, ou corte de 3 a 6
+>>> a[3:7]
+array([3, 4, 5, 6])
+>>> # Acessando um único valor em uma matriz
+>>> b = np.array([[1, 2, 3], [4, 5, 6]])
+>>> b[1][0]
+4
+```
+
+O mesmo que foi feito com o vetor pode ser feito para conseguir slices das matrizes, com a diferença que é possível
+utilizar a notação de slice em todos os campos de índice.
+
+Para obter mais informações, visite o site da documentação do [Numpy](https://numpy.org/doc/stable/user/whatisnumpy.html).
 # Estudando RMarkdown e Markdown
 
 - [Rmarkdown](https://geessyca.github.io/Rmarkdown/#1)
