@@ -16,6 +16,7 @@ Estudando ciência dos dados
 - [Introdução à ciência de dados](http://www.ime.usp.br/~jmsinger/MAE5755/cdados2020set30.pdf)
 - [Data Science with R](https://r4ds.had.co.nz/)
 - [Visão Geral da Ciência de Dados](https://geessyca.github.io/VisaoGeralCienciadeDados/#1)
+- [Introduction to Data Science](https://rafalab.github.io/dsbook/)
 
 ## Família de pacotes a serem estudados
 
