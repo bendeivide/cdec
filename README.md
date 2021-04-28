@@ -4,7 +4,6 @@ Estudando ciência dos dados
 ## Integrantes
 
 - [Ben Dêivide (DEFIM/UFSJ)](http://bendeivide.github.io)
-- [Gessyca Moreira (Eng. Telecom./UFSJ)](https://www.linkedin.com/in/gessyca-moreira-907041209/)
 - [Lucas Rebouças (Eng. Civil/UFSJ)](https://www.linkedin.com/in/lucasreboucas)
 - [Matheus Fernando (Eng. Mec/UFSJ)](https://www.linkedin.com/in/matheus-fernando-santos-219555b0)
 
