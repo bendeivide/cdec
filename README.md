@@ -266,7 +266,8 @@ utilizar a notação de slice em todos os campos de índice.
 
 Para obter mais informações, visite o site da documentação do [Numpy](https://numpy.org/doc/stable/user/whatisnumpy.html).
 
-###Introdução ao Pandas
+### Introdução ao Pandas
+
 Assim como **Numpy**, **Pandas** também necessita ser instalado antes de ser usado. Para isso, podemos usar tanto `pip` quanto
 `conda`:
 
