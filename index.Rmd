@@ -18,8 +18,11 @@ r2d3(d3_version = 4,
 ```
 ----------
 
-# <i class="fas fa-brain"></i> Objetivo <img src="images/logo.png" align="right" height="139" id="objetivo"/>
+# <i class="fas fa-brain"></i> Objetivo <img src="" align="right" height="139" id="objetivo"/>
 
+<center>
+![](images/logo.png)
+</center>
 
 O Projeto tem o objetivo de ensinar, trocar experiências, acessorar, temas relevantes à Ciência de dados, que nada mais é do que o estudo da Estatística e a Computação. A experiência será extraordinária, e esperamos que todos no grupo apreciem, divulguem e zele por esse projeto, pois acima de tudo o que falamos, propagaremos conhecimento, uma liberdade necessária.
 
