@@ -142,7 +142,7 @@ Python é hoje em dia considerado a linguagem para cientistas de dados, isso se 
 ### Introdução ao Numpy
 Primeiramente, antes de usar o módulo numpy, é necessário que ele esteja instalado no computador ou virtual environment
 de desenvolvimento. Para isso, assim como quase todos os módulos para Python, podemos fazer essa instalação utilizando o 
-**pip** ou **conda**.
+`pip` ou `conda`.
 
 `pip install numpy` ou `conda install numpy`
 
@@ -265,6 +265,66 @@ O mesmo que foi feito com o vetor pode ser feito para conseguir slices das matri
 utilizar a notação de slice em todos os campos de índice.
 
 Para obter mais informações, visite o site da documentação do [Numpy](https://numpy.org/doc/stable/user/whatisnumpy.html).
+
+###Introdução ao Pandas
+Assim como **Numpy**, **Pandas** também necessita ser instalado antes de ser usado. Para isso, podemos usar tanto `pip` quanto
+`conda`:
+
+`pip install pandas` ou `conda install pandas`
+
+Após instalado, **Pandas** agora pode ser importado para ser utilizado no seu script assim como vimos
+anteriormente com o **Numpy**
+
+```python
+import pandas as pd
+```
+
+Assim quando formos usar as funções, classes e métodos do **Pandas** nós precisamos escrever apenas `pd`.
+
+Existem várias formas de criar um _DataFrame_ usando **Pandas**. Aqui veremos dois métodos básicos, um criado a partir
+de um dicionário Python e outro importando de um CSV.
+
+```python
+>>> # Criando DataFrame com dicionários Python.
+>>> import pandas as pd
+>>>
+>>> # Cria um dicionário com as chaves iguais ao nome das colunas e com os valores
+>>> # iguais a listas de valores.
+>>> dict_data = {"a": [1, 2, 3],
+...              "b": [4, 5, 6],
+...              "c": [7, 8, 9]}
+>>> # (Opcional) Cria uma lista de nomes para os índices.
+>>> index = ["experimento 1", "experimento 2", "experimento 3"]
+>>> # Cria o DataFrame passando o dicionário como primeiro parâmetro e a lista
+>>> # de índices como segundo parâmetro
+>>> dict_data_frame = pd.DataFrame(dict_data, index=index)
+>>> dict_data_frame
+               a  b  c
+experimento 1  1  4  7
+experimento 2  2  5  8
+experimento 3  3  6  9
+```
+
+Aqui criamos um DataFrame usando dicionários Python. O parâmetro de índice é opcional, caso ele não seja colocado,
+no lugar dos nomes escolhidos serão adicionados valores incrementais, ou seja, 1, 2, 3, ... n, em que n é o número de
+linhas no seu DataFrame.
+
+Agora veremos como importar um CSV como DataFrame usando **Pandas**
+```python
+>>> # Criando um DataFrame importando um CSV.
+>>> import pandas as pd
+>>>
+>>> # Utilizamos a função read_csv(local do arquivo, separador, index_col=índice ou nome da coluna)
+>>> csv_data_frame = pd.read_csv('./recursos/introducao pandas/csvData.csv', ";", index_col=0)
+>>> csv_data_frame
+               a  b  c
+Experimento 1  1  4  7
+Experimento 2  2  5  8
+Experimento 3  3  6  9
+```
+
+Aqui podemos ver como é simples importar um CSV como DataFrame usando o **Pandas**. O arquivo
+utilizado para este teste pode ser encontrado no nosso GIT na pasta recursos, introducao pandas.
 # Estudando RMarkdown e Markdown
 
 - [Rmarkdown](https://geessyca.github.io/Rmarkdown/#1)
