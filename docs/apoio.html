@@ -105,7 +105,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Material de apoio ao CDEC"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","output"]}},"value":[{"type":"character","attributes":{},"value":["Material de apoio ao CDEC"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_website"]}},"value":[{"type":"NULL"}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","theme"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["styles.css"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2441,16 +2441,23 @@ Material
 <ul>
 <li><a href="#ementas-para-referência">Ementas para referência</a></li>
 <li><a href="#materiais-interessantes">Materiais interessantes</a></li>
-<li><a href="#família-de-pacotes-a-serem-estudados">Família de pacotes a serem estudados</a>
-<ul>
-<li><a href="#pacotes-r">Pacotes R</a></li>
-</ul></li>
+<li><a href="#estudando-rmarkdown-e-markdown">Estudando RMarkdown e Markdown</a></li>
+<li><a href="#como-usar-o-github">Como usar o GitHub</a></li>
 <li><a href="#linguagens-de-programação">Linguagens de programação</a>
 <ul>
-<li><a href="#linguagem-r">Linguagem R</a></li>
-<li><a href="#linguagem-python">Linguagem Python</a></li>
+<li><a href="#ambiente-r">Ambiente R</a>
+<ul>
+<li><a href="#família-de-pacotes-a-serem-estudados">Família de pacotes a serem estudados</a></li>
+<li><a href="#estudando-o-r">Estudando o R</a></li>
 </ul></li>
-<li><a href="#estudando-rmarkdown-e-markdown">Estudando RMarkdown e Markdown</a></li>
+<li><a href="#linguagem-python">Linguagem Python</a>
+<ul>
+<li><a href="#introdução-ao-python">Introdução ao Python</a></li>
+<li><a href="#primeiros-comandos-no-python">Primeiros comandos no Python</a></li>
+<li><a href="#módulos-python-para-data-science">Módulos Python para Data Science</a></li>
+<li><a href="#introdução-ao-pandas">Introdução ao Pandas</a></li>
+</ul></li>
+</ul></li>
 </ul>
 </nav>
 </div>
@@ -2462,17 +2469,220 @@ Material
 <ul>
 <li><a href="http://www.ime.usp.br/~jmsinger/MAE5755/cdados2020set30.pdf">Introdução à ciência de dados</a></li>
 <li><a href="https://r4ds.had.co.nz/">Data Science with R</a></li>
+<li><a href="https://geessyca.github.io/VisaoGeralCienciadeDados/#1">Visão Geral da Ciência de Dados</a></li>
+<li><a href="https://rafalab.github.io/dsbook/">Introduction to Data Science</a></li>
 </ul>
-<h2 id="família-de-pacotes-a-serem-estudados">Família de pacotes a serem estudados</h2>
-<h3 id="pacotes-r">Pacotes R</h3>
+<h1 id="estudando-rmarkdown-e-markdown">Estudando RMarkdown e Markdown</h1>
+<p>O entendimento sobre o RMarkdown e o Markdown será muito importante para desenvolvermos os nossos materiais. Segue uma apresentação preliminar:</p>
+<ul>
+<li><a href="https://geessyca.github.io/Rmarkdown/#1">Rmarkdown</a></li>
+</ul>
+<h1 id="como-usar-o-github">Como usar o GitHub</h1>
+<p>Para entender como usar o GitHub e nossos projetos R/Python/RStudio, assista a série <a href="https://youtube.com/playlist?list=PL-20Z1XFWKR1YPXb12UMmXRsAKelZhzca">rapidinahs do R (0005 - 00011)</a>.</p>
+<h1 id="linguagens-de-programação">Linguagens de programação</h1>
+<p>Iremos iniciar a falar sobre as duas principais linguagens que iremos trabalhar, o ambiente R e o Python.</p>
+<h2 id="ambiente-r">Ambiente R</h2>
+<h3 id="família-de-pacotes-a-serem-estudados">Família de pacotes a serem estudados</h3>
 <ul>
 <li><a href="https://www.tidyverse.org/">Família tidyverse</a></li>
 </ul>
-<h1 id="linguagens-de-programação">Linguagens de programação</h1>
-<h2 id="linguagem-r">Linguagem R</h2>
+<h3 id="estudando-o-r">Estudando o R</h3>
+<p>Temos um curso em desenvolvimento que vale a pena estudar, seguido por vídeo-aulas, materiais escritos e exercícios. Acesse: <a href="http://bendeivide.github.io/cursor" class="uri">http://bendeivide.github.io/cursor</a>.</p>
 <h2 id="linguagem-python">Linguagem Python</h2>
-<h1 id="estudando-rmarkdown-e-markdown">Estudando RMarkdown e Markdown</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h3 id="introdução-ao-python">Introdução ao Python</h3>
+<p>Por volta dos anos 1980, o holandês <a href="https://gvanrossum.github.io/">Guido Van Rossum</a>, que até então trabalhava no time de desenvolvimento da linguagem ABC no CWI (Centrum Wiskunde &amp; Informatica), o instituto nacional de pesquisa em matemática e ciência da computação da Holanda, se tornaria a principal figura responsável pela criação do Python, uma linguagem de programação com ampla aplicabilidade que atingiu alta popularidade entre desenvolvedores, acadêmicos e empresas (incluindo gigantes como Google, YouTube e Dropbox).</p>
+<p>Sucintamente, podemos descrever o Python como uma linguagem de programação open source de alto nível, interpretada, interativa e orientada a objetos. Sua aplicação é bastante versátil e inclui desenvolvimento de aplicativos, páginas da web, análise de dados, automatização de rotinas e até mesmo desenvolvimento de jogos.</p>
+<p>O Python está disponível para muitos sistemas operacionais, incluindo os populares Linux, Mac OS e Windows. A versão mais recente para seu processador e sistema operacional (SO) pode ser encontrada para download na <a href="https://www.python.org/">página oficial do Python</a>.</p>
+<p>Após a instalação, você poderá utilizar a linguagem por meio do seu terminal ou prompt de comando, além do IDLE, o ambiente de desenvolvimento integrado (do inglês, Integrated Development Environment, ou IDE) padrão do Python, criado pelo já citado fundador da linguagem, <a href="https://gvanrossum.github.io/">Guido Van Rossum</a>. A utilização de outros IDE’s, além do próprio IDLE, podem tornar a experiência com a linguagem mais didática e/ou dinâmica, porém trata-se uma escolha que fica a critério do estudante/programador. Algumas alternativas de IDE’s para programação Python são o <a href="https://www.spyder-ide.org/">Spyder</a>, o <a href="https://www.jetbrains.com/pycharm/download/">Pycharm</a> e o <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>.</p>
+<h3 id="primeiros-comandos-no-python">Primeiros comandos no Python</h3>
+<p>Com o Python já disponível na sua máquina, é o momento de inaugurar a experiência com a linguagem. Tipicamente, o código mais básico para iniciar os estudos é retornar <strong>“Olá, Mundo!”</strong> na tela.</p>
+<p><strong>Código</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Print(<span class="st">&#39;Ola, Mundo!&#39;</span>)</span></code></pre></div>
+<p><strong>Output</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Ola, Mundo<span class="op">!</span></span></code></pre></div>
+<p>Finalmente, temos nosso primeiro programa no Python! É válido citar que as aspas utilizadas podem ser simples ou duplas.</p>
+<p>Para a construção de um código bem estruturado, é importantíssimo adicionar comentários conforme o trabalho avança, garantindo que a leitura do programa fique o mais dinâmica possível, permitindo melhor compreensão e facilitando o ajuste de possíveis erros.</p>
+<p>Por padrão, os comentários no Python são inseridos utilizando o símbolo <strong>#</strong> + 1 espaço + comentário. É recomendável utilizar ao menos <strong>2 espaços</strong> entre a última linha de código e um comentário, conforme o exemplo a seguir.</p>
+<p><strong>Código</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>var <span class="op">=</span> <span class="st">&#39;Ola, Mundo!&#39;</span>  <span class="co"># Exemplo de comentário 1</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Print(var)  <span class="co"># Exemplo de comentário 2</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Ola, Mundo<span class="op">!</span></span></code></pre></div>
+<p>Cada código trará suas informações no formato que mais se adeque ao seu objetivo, sendo assim, o Python apresenta diferentes tipos de dados possíveis. Para os primeiros passos, os tipos de dados mais utilizados serão os demonstrados abaixo:</p>
+<ul>
+<li><strong>str:</strong> Dado no formato texto, ‘string’ representa uma sequência de caracteres</li>
+</ul>
+<p>Exemplos de strings: “Olá, Mundo!”, “CDEC”, “Python”…</p>
+<ul>
+<li><strong>int:</strong> Dado numérico no formato inteiro (integer)</li>
+</ul>
+<p>Exemplos de números de tipo integer: 1, -2, -5, 15…</p>
+<ul>
+<li><strong>float:</strong> Dado numérico no formato “flutuante”, apresentando casas decimais após a parte inteira</li>
+</ul>
+<p>Exemplos de números de tipo float: 1.20, -13.444, 15.89…</p>
+<ul>
+<li><strong>bool:</strong> Dado no formato “booleano”, tendo como característica os valores “True” e “False”</li>
+</ul>
+<p>Os únicos valores possíveis para uma variável booleana são “True” e “False”</p>
+<p>A função type( ) pode nos mostrar o tipo de uma variável, enquanto as funções str( ), int( ), float( ) e bool( ) permite fazer os valores transitarem entre diferentes tipos, como pode ser observado nos exemplos abaixo:</p>
+<p><strong>Código</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="op">-</span><span class="fl">3.50</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="st">&quot;Olá, Mundo!&quot;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(a))</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(x))</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(y))</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(z))</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(x))</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">int</span>(y))</span></code></pre></div>
+<p><strong>Output</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;bool&#39;</span><span class="op">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;int&#39;</span><span class="op">&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;float&#39;</span><span class="op">&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="kw">class</span><span class="st">&#39;str&#39;</span><span class="op">&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">3</span></span></code></pre></div>
+<h3 id="módulos-python-para-data-science">Módulos Python para Data Science</h3>
+<p>Python é hoje em dia considerado a linguagem para cientistas de dados, isso se dá pelo fato de ela possuir vários módulos que facilitam a construção do algoritmo além de permitir em alguns casos a utilização de computação em GPU, tornando o processo muito mais rápido. Hoje os principais módulos usados são os seguintes: * <strong>Numpy:</strong> NumPy é um projeto open source que permite executar computação numérica com Python de forma rápida e fácil, quase todas as ferramentas seguintes, se não todas, usam do poder de computação de arrays e matrizes de Numpy. * <strong>Scipy:</strong> SciPy é um pacote de módulos Python open source voltados para ciência, matemática e engenharia. Dentro deste pacote são incluídos módulos como NumPy, Matplotlib (usado principalmente para plotagem de gráficos) e Pandas. * <strong>Theano:</strong> Theano é um módulo Python que te permite definir, otimizar, e avaliar expressões matemáticas envolvendo arrays multi-dimensionais eficientemente. Ele é construído em cima de NumPy. Theano também te permite fazer computações de dados usando a GPU, aumentando a performance em até 140x. * <strong>TensorFlow:</strong> TensorFlow é um módulo Python open source para machine learning. Ele tem um ecossistema abrangente e flexível de ferramentas, bibliotecas e recursos da comunidade que permite aos pesquisadores levar adiante ML de última geração e aos desenvolvedores criar e implantar aplicativos com tecnologia de ML. * <strong>Keras:</strong> Keras é uma API desenvolvida para facilitar o desenvolvimento de modelos de machine learning diminuindo o número de ações que o usuário necessita fazer para casos comuns, além de mostrar mensagens de erro claras e que permitem encontrar a causa de forma mais fácil. Keras também possui uma documentação extensa e guias para o desenvolvedor. Hoje em dia é considerado uma das 5 melhores para deep learning. * <strong>PyTorch:</strong> Assim como TensorFlow, PyTorch é um módulo Python open source para machine learning. Ele é baseado na biblioteca Torch que também está disponível para C++. * <strong>Pandas:</strong> Pandas é uma ferramenta open source essencial para análise de dados em Python. Ele é rápido, flexível e fácil de usar. Com ele é possível fazer a criação e manipulação de Data Frames, além de poder fazer um resumo estatístico do Data Frame com um único comando. ### Introdução ao Numpy Primeiramente, antes de usar o módulo numpy, é necessário que ele esteja instalado no computador ou virtual environment de desenvolvimento. Para isso, assim como quase todos os módulos para Python, podemos fazer essa instalação utilizando o <code>pip</code> ou <code>conda</code>.</p>
+<p><code>pip install numpy</code> ou <code>conda install numpy</code></p>
+<p>Agora com o módulo instalado podemos utilizá-lo em código. Para isso precisamos primeiro importar esse módulo da seguinte forma:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
+<p>Essa é a forma que o módulo numpy é normalmente importado. Esse código nos permite escrever apenas <code>np</code> quando formos utilizar alguma função Numpy, esse mesmo formato será visto posteriormente.</p>
+<p>Numpy contem arrays multidimensionais e matrizes como estrutura de dados. Ele disponibiliza um tipo de dado chamado <code>ndarray</code> que como o nome sugere, é um array multidimensional. Esse tipo de dado contém vários métodos para fazer operações sobre ele de forma eficiente e facilmente, a maioria das vezes mais rápido que listas nativas do Python. <code>ndarray</code> juntamente com Numpy, adicionam estruturas de dados cálculos eficientes com arrays e matrizes e ainda disponibilizam uma grande gama de funções matemáticas de alto nível que operam nesses arrays e matrizes.</p>
+<p>Para criar um <code>ndarray</code> inicializado com todos os indices como 0 ou 1 basta seguir o código abaixo:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Inicializa um ndarray com 10 elementos todos com o valor 0</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.zeros(<span class="dv">10</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Inicializa um ndarray com 10 elementos todos com o valor 1</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> np.ones(<span class="dv">10</span>)</span></code></pre></div>
+<p>Para criar um <code>ndarray</code> usando uma lista Python é necessário fazer o seguinte:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> c <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> d <span class="op">=</span> np.array(c)  <span class="co"># Também é possível utilizar a lista diretamente como parâmetro</span></span></code></pre></div>
+<p>Os cálculos básicos como soma, subtração, multiplicação e divisão são tão simples quanto as operações de variáveis numéricas:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e <span class="op">=</span> b <span class="op">+</span> d</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>array([ <span class="fl">2.</span>,  <span class="fl">3.</span>,  <span class="fl">4.</span>,  <span class="fl">5.</span>,  <span class="fl">6.</span>,  <span class="fl">7.</span>,  <span class="fl">8.</span>,  <span class="fl">9.</span>, <span class="fl">10.</span>, <span class="fl">11.</span>])</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e <span class="op">=</span> b <span class="op">-</span> d</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>array([ <span class="fl">0.</span>, <span class="op">-</span><span class="fl">1.</span>, <span class="op">-</span><span class="fl">2.</span>, <span class="op">-</span><span class="fl">3.</span>, <span class="op">-</span><span class="fl">4.</span>, <span class="op">-</span><span class="fl">5.</span>, <span class="op">-</span><span class="fl">6.</span>, <span class="op">-</span><span class="fl">7.</span>, <span class="op">-</span><span class="fl">8.</span>, <span class="op">-</span><span class="fl">9.</span>])</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> f <span class="op">=</span> e <span class="op">*</span> d</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> f</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>array([  <span class="fl">0.</span>,  <span class="op">-</span><span class="fl">2.</span>,  <span class="op">-</span><span class="fl">6.</span>, <span class="op">-</span><span class="fl">12.</span>, <span class="op">-</span><span class="fl">20.</span>, <span class="op">-</span><span class="fl">30.</span>, <span class="op">-</span><span class="fl">42.</span>, <span class="op">-</span><span class="fl">56.</span>, <span class="op">-</span><span class="fl">72.</span>, <span class="op">-</span><span class="fl">90.</span>])</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> f <span class="op">=</span> e <span class="op">/</span> d</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> f</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>array([ <span class="fl">0.</span>        , <span class="op">-</span><span class="fl">0.5</span>       , <span class="op">-</span><span class="fl">0.66666667</span>, <span class="op">-</span><span class="fl">0.75</span>      , <span class="op">-</span><span class="fl">0.8</span>       ,</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>       <span class="op">-</span><span class="fl">0.83333333</span>, <span class="op">-</span><span class="fl">0.85714286</span>, <span class="op">-</span><span class="fl">0.875</span>     , <span class="op">-</span><span class="fl">0.88888889</span>, <span class="op">-</span><span class="fl">0.9</span>       ])</span></code></pre></div>
+<p>Para criar <code>ndarrays</code> multidimensionais existem algumas formas, como usar uma lista Python multidemensional ou simplesmente iniciar um <code>ndarray</code> com valores aleatórios. Esses não são os únicos métodos para realizar essa tarefa, mas já é um bom começo para se habituar ao Numpy.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Utilizando Python list</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> g <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]]</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> h <span class="op">=</span> np.array(g)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> h</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>       [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Inicializando com método empty.</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> h <span class="op">=</span> np.empty((<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> h</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>array([[<span class="fl">1.5711153e-316</span>, <span class="fl">0.0000000e+000</span>],</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>       [<span class="fl">0.0000000e+000</span>, <span class="fl">0.0000000e+000</span>]])</span></code></pre></div>
+<p>As mesmas regras de operações entre matrizes também são aplicadas aos <code>ndarrays</code>, ou seja, se tivermos uma matriz 2x2 e tentarmos multiplicar por um vetor de tamanho 3 teremos um erro no código e o programa irá levantar uma exceção.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> h <span class="op">=</span> np.empty((<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.random.rand(<span class="dv">2</span>)  <span class="co"># Inicializa um vetor de tamanho 2 com números aleatórios</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>array([<span class="fl">0.22500409</span>, <span class="fl">0.32657332</span>])</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">*</span> h  <span class="co"># Operação com sucesso</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>array([[<span class="fl">3.535074e-317</span>, <span class="fl">0.000000e+000</span>],</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>       [<span class="fl">0.000000e+000</span>, <span class="fl">0.000000e+000</span>]])</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.random.rand(<span class="dv">3</span>)  <span class="co"># Vetor agora com 3 números aleatórios</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">*</span> h  <span class="co"># Essa operação gera erro</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  File <span class="st">&quot;/usr/lib/python3.8/code.py&quot;</span>, line <span class="dv">90</span>, <span class="kw">in</span> runcode</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">exec</span>(code, <span class="va">self</span>.<span class="bu">locals</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  File <span class="st">&quot;&lt;input&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="pp">ValueError</span>: operands could <span class="kw">not</span> be broadcast together <span class="cf">with</span> shapes (<span class="dv">3</span>,) (<span class="dv">2</span>,<span class="dv">2</span>) </span></code></pre></div>
+<p>Como podemos ver pelo erro, a operação não foi sucedida pelo fato de não terem formatos compatíveis.</p>
+<p>Agora que sabemos como inicializar <code>ndarrays</code> e fazer operações com eles, ainda precisamos saber como acessar os valores dentro destes <code>ndarrays</code>. Para isso, utilizamos uma sintaxe muito parecida com a nativa do Python.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.arange(<span class="dv">10</span>)  <span class="co"># Inicia um ndarray de 0 a 9</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Acessando um único valor</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a[<span class="dv">2</span>]</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Acessando o último valor</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Criando um slice, ou corte, do ndarray de 0 a 2</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a[:<span class="dv">3</span>]</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>])</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Criando um slice, ou corte, do ndarray de 3 a 9</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a[<span class="dv">3</span>:]</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>array([<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Criando um slice, ou corte de 3 a 6</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a[<span class="dv">3</span>:<span class="dv">7</span>]</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>array([<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Acessando um único valor em uma matriz</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b[<span class="dv">1</span>][<span class="dv">0</span>]</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span></code></pre></div>
+<p>O mesmo que foi feito com o vetor pode ser feito para conseguir slices das matrizes, com a diferença que é possível utilizar a notação de slice em todos os campos de índice.</p>
+<p>Para obter mais informações, visite o site da documentação do <a href="https://numpy.org/doc/stable/user/whatisnumpy.html">Numpy</a>.</p>
+<h3 id="introdução-ao-pandas">Introdução ao Pandas</h3>
+<p>Assim como <strong>Numpy</strong>, <strong>Pandas</strong> também necessita ser instalado antes de ser usado. Para isso, podemos usar tanto <code>pip</code> quanto <code>conda</code>:</p>
+<p><code>pip install pandas</code> ou <code>conda install pandas</code></p>
+<p>Após instalado, <strong>Pandas</strong> agora pode ser importado para ser utilizado no seu script assim como vimos anteriormente com o <strong>Numpy</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre></div>
+<p>Assim quando formos usar as funções, classes e métodos do <strong>Pandas</strong> nós precisamos escrever apenas <code>pd</code>.</p>
+<p>Existem várias formas de criar um <em>DataFrame</em> usando <strong>Pandas</strong>. Aqui veremos dois métodos básicos, um criado a partir de um dicionário Python e outro importando de um CSV.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Criando DataFrame com dicionários Python.</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Cria um dicionário com as chaves iguais ao nome das colunas e com os valores</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># iguais a listas de valores.</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> dict_data <span class="op">=</span> {<span class="st">&quot;a&quot;</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>...              <span class="st">&quot;b&quot;</span>: [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>],</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>...              <span class="st">&quot;c&quot;</span>: [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]}</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># (Opcional) Cria uma lista de nomes para os índices.</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> index <span class="op">=</span> [<span class="st">&quot;experimento 1&quot;</span>, <span class="st">&quot;experimento 2&quot;</span>, <span class="st">&quot;experimento 3&quot;</span>]</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Cria o DataFrame passando o dicionário como primeiro parâmetro e a lista</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># de índices como segundo parâmetro</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> dict_data_frame <span class="op">=</span> pd.DataFrame(dict_data, index<span class="op">=</span>index)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> dict_data_frame</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>               a  b  c</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>experimento <span class="dv">1</span>  <span class="dv">1</span>  <span class="dv">4</span>  <span class="dv">7</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>experimento <span class="dv">2</span>  <span class="dv">2</span>  <span class="dv">5</span>  <span class="dv">8</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>experimento <span class="dv">3</span>  <span class="dv">3</span>  <span class="dv">6</span>  <span class="dv">9</span></span></code></pre></div>
+<p>Aqui criamos um DataFrame usando dicionários Python. O parâmetro de índice é opcional, caso ele não seja colocado, no lugar dos nomes escolhidos serão adicionados valores incrementais, ou seja, 1, 2, 3, … n, em que n é o número de linhas no seu DataFrame.</p>
+<p>Agora veremos como importar um CSV como DataFrame usando <strong>Pandas</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Criando um DataFrame importando um CSV.</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Utilizamos a função read_csv(local do arquivo, separador, index_col=índice ou nome da coluna)</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> csv_data_frame <span class="op">=</span> pd.read_csv(<span class="st">&#39;./recursos/introducao pandas/csvData.csv&#39;</span>, <span class="st">&quot;;&quot;</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> csv_data_frame</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>               a  b  c</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>Experimento <span class="dv">1</span>  <span class="dv">1</span>  <span class="dv">4</span>  <span class="dv">7</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>Experimento <span class="dv">2</span>  <span class="dv">2</span>  <span class="dv">5</span>  <span class="dv">8</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>Experimento <span class="dv">3</span>  <span class="dv">3</span>  <span class="dv">6</span>  <span class="dv">9</span></span></code></pre></div>
+<p>Aqui podemos ver como é simples importar um CSV como DataFrame usando o <strong>Pandas</strong>. O arquivo utilizado para este teste pode ser encontrado no nosso GIT na pasta recursos, introducao pandas.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2487,7 +2697,13 @@ Material
 <div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
+<div class="distill-site-nav distill-site-footer">
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este trabalho está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons - Atribuição-NãoComercial 4.0 Internacional</a>.</p>
+<!-- hitwebcounter Code START -->
+<p><a href="https://www.hitwebcounter.com" target="_blank"> <img src="https://hitwebcounter.com/counter/counter.php?page=7808015&style=0009&nbdigits=9&type=page&initCount=100" title="Free Counter" Alt="web counter"   border="0" /></a></p>
+</div>
 <!--/radix_placeholder_navigation_after_body-->
+
 
 </body>
 

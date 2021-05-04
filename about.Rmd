@@ -13,8 +13,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - [Ben Dêivide (DEFIM/UFSJ)](http://bendeivide.github.io)
 - [Marcelo Carlos Ribeiro/UFOP](http://lattes.cnpq.br/7535255933317217)
-- [Gessyca Moreira (Eng. Telecom./UFSJ)]()
-- [Lucas Rebouças (Eng. Civil/UFSJ)](https://www.linkedin.com/in/lucasreboucas)
 - [Matheus Fernando (Eng. Mec/UFSJ)](https://www.linkedin.com/in/matheus-fernando-santos-219555b0)
 
 # Apoio

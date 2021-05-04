@@ -4,7 +4,7 @@ Estudando ciência dos dados
 ## Integrantes
 
 - [Ben Dêivide (DEFIM/UFSJ)](http://bendeivide.github.io)
-- [Lucas Rebouças (Eng. Civil/UFSJ)](https://www.linkedin.com/in/lucasreboucas)
+- [Marcelo Carlos Ribeiro/UFOP](http://lattes.cnpq.br/7535255933317217)
 - [Matheus Fernando (Eng. Mec/UFSJ)](https://www.linkedin.com/in/matheus-fernando-santos-219555b0)
 
 ## Ementas para referência
@@ -17,15 +17,20 @@ Estudando ciência dos dados
 - [Visão Geral da Ciência de Dados](https://geessyca.github.io/VisaoGeralCienciadeDados/#1)
 - [Introduction to Data Science](https://rafalab.github.io/dsbook/)
 
-## Família de pacotes a serem estudados
+# Linguagens de programação
 
-### Pacotes R
+Iremos iniciar a falar sobre as duas principais linguagens que iremos trabalhar, o ambiente R e o Python.
+
+## Ambiente R
+
+### Família de pacotes a serem estudados
 
 - [Família tidyverse](https://www.tidyverse.org/)
 
-# Linguagens de programação
+### Estudando o R
 
-## Linguagem R
+Temos um curso em desenvolvimento que vale a pena estudar, seguido por vídeo-aulas, materiais escritos e exercícios. Acesse: <http://bendeivide.github.io/cursor>.
+
 
 ## Linguagem Python
 
