@@ -1,7 +1,7 @@
 ---
 title: "CDEC"
 description: |
-  **CDEC** - Ciência dos Dados: Estatística e Computação
+  **CDEC** - Ciência de Dados: Estatística e Computação
 site: distill::distill_website
 ---
 
