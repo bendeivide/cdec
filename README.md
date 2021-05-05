@@ -1,5 +1,5 @@
-# datascience
-Estudando ciência dos dados
+# CDEC - Ciência de Dados: Estatística e Computação
+Estudando ciência de dados
 
 ## Integrantes
 
@@ -16,6 +16,16 @@ Estudando ciência dos dados
 - [Data Science with R](https://r4ds.had.co.nz/)
 - [Visão Geral da Ciência de Dados](https://geessyca.github.io/VisaoGeralCienciadeDados/#1)
 - [Introduction to Data Science](https://rafalab.github.io/dsbook/)
+
+# Estudando RMarkdown e Markdown
+
+O entendimento sobre o RMarkdown e o Markdown será muito importante para desenvolvermos os nossos materiais. Segue uma apresentação preliminar:
+
+- [Rmarkdown](https://geessyca.github.io/Rmarkdown/#1)
+
+# Como usar o GitHub
+
+Para entender como usar o GitHub e nossos projetos R/Python/RStudio, assista a série [rapidinahs do R (0005 - 00011)](https://youtube.com/playlist?list=PL-20Z1XFWKR1YPXb12UMmXRsAKelZhzca).
 
 # Linguagens de programação
 
@@ -331,8 +341,5 @@ Experimento 3  3  6  9
 
 Aqui podemos ver como é simples importar um CSV como DataFrame usando o **Pandas**. O arquivo
 utilizado para este teste pode ser encontrado no nosso GIT na pasta recursos, introducao pandas.
-# Estudando RMarkdown e Markdown
-
-- [Rmarkdown](https://geessyca.github.io/Rmarkdown/#1)
 
 
