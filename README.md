@@ -139,7 +139,8 @@ listas;
 * `dict`: É um tipo de lista que cada elemento possui uma chave e um valor atrelado a ela, também conhecido
   como dicionário;
 
-* `set`: É o mesmo que o dicionário, mas assim como `tuple` ele também não pode ser modificado depois que inicializado;
+* `set`: É muito parecido com listas, a diferença é que não é possível mudar os valores contidos nele,
+  mas é possível adicionar novos;
 
 Agora que sabemos da existência desses tipos de variáveis, vamos analisá-los um pouco mais a fundo separadamente,
 começando com `list`.
@@ -230,6 +231,81 @@ TypeError: 'tuple' object does not support item assignment
 
 Como podemos ver, `tuple` é um tipo de variável bem simples de compreender, e quando tentamos modificar algum valor
 nela, o programa levanta um erro.
+
+### Dict
+
+Também visto anteriormente, `dict` ou dicionários são um outro tipo de lista que possuem pares de chaves e valores
+(key, value), dessa forma conseguimos acessar um determinado elemento não pelo seu índice, mas pela sua chave. Veremos
+agora como utilizar `dict`s em código.
+
+```python
+>>> # Inicializando um dict vazio.
+>>> a = {}
+>>> # Inicializando um dict com chaves e valores.
+>>> b = {'linguagem': 'Python', 'versão': 3.9, 'descrição': 'Script para ensinar a utilização de dicionários'}
+>>> # Adicionando um par de chave, valor.
+>>> a['resposta'] = 42
+>>> a
+{'resposta': 42}
+>>> # Acessando um item do dict.
+>>> b['versão']
+3.9
+>>> # Removendo um item do dict e retornando esse item.
+>>> c = b.pop('versão')  # Retorna apenas o valor da chave.
+>>> c
+3.9
+>>> b
+>>> {'linguagem': 'Python', 'descrição': 'Script para ensinar a utilização de dicionários'}
+>>> # Removendo um item do dict sem retornar
+>>> del b['descrição']
+>>> b
+{'linguagem': 'Python'}
+>>> # Mudando um valor do dict
+>>> b['linguagem'] = 'Python3'
+>>> b
+{'linguagem': 'Python3'}
+```
+
+Veremos mais utilidades de dicionários na sessão de loops.
+
+### Set
+
+Como visto anteriormente, `set` é muito parecido com listas, a diferença é que não é possível mudar os valores
+contidos nele, mas é possível adicionar novos. Vamos ver em código como isso funciona.
+
+```python
+>>> # Inicializando um set
+>>> a = {'Python', 3.9, 'dev'}
+>>> # Adicionando um item ao set
+>>> a.add('test')
+>>> a
+{'Python', 'dev', 3.9, 'test'}
+>>> # Não aceita itens duplicados
+>>> a.add('test')
+>>> a
+{'Python', 'dev', 3.9, 'test'}
+>>> # Juntando dois sets
+>>> b = {1, 2, 3}
+>>> a.update(b)  # Funciona com qualquer tipo iterável
+>>> a
+{'dev', 1, 3.9, 'test', 2, 3, 'Python'}
+>>> # Removendo um item do set
+>>> a.remove('test')  # Se o item especificado não existir, irá ocorrer um erro.
+>>> a
+{'dev', 1, 3.9, 2, 3, 'Python'}
+>>> a.discard('dev')  # Se o item especificado não existir, NÃO irá ocorrer um erro.
+>>> a
+{1, 3.9, 2, 3, 'Python'}
+>>> b = a.pop()  # Remove o primeiro item e retorna esse item.
+>>> b
+1
+>>> a
+{3.9, 2, 3, 'Python'}
+```
+
+Aqui vemos que `set` é um tipo de variável bem específico, outra característica importante dele é que ele é desordenado
+e não possui uma forma de indexação, existem outras formas de verificar o que há dentro de um `set` que veremos na
+próxima sessão.
 
 ### Módulos Python para Data Science
 Python é hoje em dia considerado a linguagem para cientistas de dados, isso se dá pelo fato de ela possuir vários módulos que facilitam a construção do algoritmo além de permitir em alguns casos a utilização de computação em GPU, tornando o processo muito mais rápido. Hoje os principais módulos usados são os seguintes:
