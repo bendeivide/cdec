@@ -109,41 +109,127 @@ A função type( ) pode nos mostrar o tipo de uma variável, enquanto as funçõ
 
 **Código**
 ```Python
-a = True
-
-x = 1
-
-y = -3.50
-
-z = "Olá, Mundo!"
-
-print(type(a))
-
-print(type(x))
-
-print(type(y))
-
-print(type(z))
-
-print(str(x))
-
-print(int(y))
-```
-**Output**
-``` Python
+>>> a = True
+>>> x = 1
+>>> y = -3.50
+>>> z = "Olá, Mundo!"
+>>> print(type(a))
 <class 'bool'>
-
+>>> print(type(x))
 <class 'int'>
-
+>>> print(type(y))
 <class 'float'>
-
+>>> print(type(z))
 <class'str'>
-
+>>> print(str(x))
 1
-
+>>> print(int(y))
 -3
 ```
 
+Além dos tipos de variáveis comuns a todas as liguagens de programação explicadas acima, também existem outros tipos
+menos comuns ou exclusivas de Python. Esses outros tipos de variáveis, na grande maioria são relacionados a tipos
+iteráveis, ou seja, que podem conter mais de um único elemento. Esses tipos são:
+
+* `list`: Como o nome sugere, é uma lista onde podemos armazenar vários outros tipos de variáveis, até mesmo outras
+listas;
+  
+* `tuple`: É o mesmo que a lista, com a diferença de que ela não pode ser modificada depois que inicializada;
+
+* `dict`: É um tipo de lista que cada elemento possui uma chave e um valor atrelado a ela, também conhecido
+  como dicionário;
+
+* `set`: É o mesmo que o dicionário, mas assim como `tuple` ele também não pode ser modificado depois que inicializado;
+
+Agora que sabemos da existência desses tipos de variáveis, vamos analisá-los um pouco mais a fundo separadamente,
+começando com `list`.
+
+### List
+
+Como visto anteriormente, `list`s são listas que podem armazenar diferentes elementos. Essas listas são indexadas com
+valores que começam em 0 para o primeiro elemento e n-1 para o último elemento, sendo n 
+o número total de elementos na lista. Agora vamos compreender como
+utilizar esse tipo de variável em código.
+```python
+>>> # inicializando uma lista vazia
+>>> a = []
+>>> # inicializando uma lista com elementos
+>>> b = [1, 3.1415926, 'python', True]  # Note que são todos de tipos diferentes
+>>> # adicionando elementos em uma lista
+>>> a.append(42)
+>>> a
+[42]
+>>> b.append(42)
+>>> b
+[1, 3.1415926, 'python', True, 42]
+>>> # acessando um item da lista
+>>> b[1]
+3.1415926
+>>> # índices negativos funcionam também, pensando na lista como se o primeiro e o último
+>>> # índice estivessem conectados formando um círculo, se o 0 é o primeiro índice, o -1 
+>>> # fica sendo o último, o -2 o penúltimo e assim sucessivamente.
+>>> b[-1]
+42
+>>> # Acessando cortes ou slices da lista.
+>>> b[:2]  # Cria uma lista com os dois primeiros elementos.
+[1, 3.1415926]
+>>> b[2:]  # Cria uma lista com os últimos elementos a partir do terceiro.
+['python', True, 42]
+>>> b[1:4]  # Cria uma lista do segundo elemento até o quarto elemento (último índice não incluso).
+[3.1415926, 'python', True]
+>>> # Criando uma lista bidimensional
+>>> c = [
+...   [1, 2, 3],
+...   [4, 5, 6],
+...   [7, 8, 9]
+... ]
+>>> # Acessando índices em uma lista bidimensional
+>>> c[1]  # Retorna a segunda linha completa
+[4, 5, 6]
+>>> c[1][1]  # Retorna o segundo elemento da segunda linha
+5
+>>> # Removendo um elemento da lista e retornando esse mesmo elemento
+>>> pi = b.pop(1)  # pop recebe o índice que queremos remover como parâmetro
+>>> pi
+3.1415926
+>>> b
+[1, 'python', True, 42]
+>>> # Removendo elementos da lista sem retornar nenhum valor
+>>> del b[-1]  # Dessa forma também é possível remover slices utilizando a notação apresentada acima
+>>> b
+[1, 'python', True]
+>>> # Mudando um valor da lista
+>>> b[0] = 2
+>>> b
+[2, 'python', True]
+```
+
+Aqui vimos o básico sobre listas, veremos mais sobre elas em tópicos mais para frente. Para criação e acesso de listas
+n-dimensionais, basta continuar criando listas dentro de listas, e colchetes para cada nível que for adicionado.
+
+### Tuple
+
+Como visto anteriormente, `tuple`s são listas imutáveis e, por esse motivo ela não tem grande parte das funções que
+foram mostradas na sessão de listas. Entretanto, a criação de uma `tuple` é tão simples quanto a de lista e o acesso é
+idêntico.
+
+```python
+>>> # Criando uma tuple
+>>> a = (1, 3.1415926, 'python', True)
+>>> # Acessando elementos
+>>> a[1]
+3.1415926
+>>> # Tentando mudar um valor da tuple
+>>> a[1] = 3
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/code.py", line 90, in runcode
+    exec(code, self.locals)
+  File "<input>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+```
+
+Como podemos ver, `tuple` é um tipo de variável bem simples de compreender, e quando tentamos modificar algum valor
+nela, o programa levanta um erro.
 
 ### Módulos Python para Data Science
 Python é hoje em dia considerado a linguagem para cientistas de dados, isso se dá pelo fato de ela possuir vários módulos que facilitam a construção do algoritmo além de permitir em alguns casos a utilização de computação em GPU, tornando o processo muito mais rápido. Hoje os principais módulos usados são os seguintes:
