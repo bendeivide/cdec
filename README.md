@@ -152,6 +152,7 @@ valores que começam em 0 para o primeiro elemento e n-1 para o último elemento
 o número total de elementos na lista. Agora vamos compreender como
 utilizar esse tipo de variável em código.
 ```python
+>>> # O character de hashtag (#) é usado para comentar partes do código e não será executado
 >>> # inicializando uma lista vazia
 >>> a = []
 >>> # inicializando uma lista com elementos
@@ -306,6 +307,107 @@ contidos nele, mas é possível adicionar novos. Vamos ver em código como isso 
 Aqui vemos que `set` é um tipo de variável bem específico, outra característica importante dele é que ele é desordenado
 e não possui uma forma de indexação, existem outras formas de verificar o que há dentro de um `set` que veremos na
 próxima sessão.
+
+### Condições em Python
+
+Nessa sessão veremos como são usadas condições em Python. Veremos dois tipos diferentes e quando é melhor usar cada um.
+
+#### if, elif e else
+
+Assim como todas as outras linguagens mais conhecidas, Python também utiliza da notação `if` e `else` para criar
+condições. Entretanto, o que outras linguagens usam como `else if`, Python fez uma abreviação para `elif`. Além disso,
+outra coisa muito importante é que Python não utiliza chaves `{}` como indicador de bloco de comando, ele utiliza a
+própria indentação para dizer qual parte do código é pertencente ao bloco de comando, ou escopo. Vamos ver em código
+como tudo isso funciona.
+
+```python
+# Inicializando variáveis para comparações
+a = 3.1415926
+b = 42
+# Comparando usando if e else.
+
+# Comparadores:
+# igualdade: ==
+# desigualdade: !=
+# menor que: <
+# maior que: >
+# menor ou igual: <= 
+# maior ou igual: >=
+# contido em: in
+
+# Operações booleanas
+# negação: not
+# e: and
+# ou: or
+
+if a == b:  # Sabemos que isso é falso, logo
+    print("A é igual a B")
+else:  # Esse será o resultado que veremos quando rodarmos o script
+    print("A é diferente de B")
+
+# Agora vamos utilizar uma entrada de usuário:
+c = input("Escreva um número: ")  # Essa função nos permite escrever algo na tela e receber uma string do usuário.
+c = float(c)  # Como o que recebemos é uma string, vamos convertê-la para float.
+
+# Podemos usar vários elif para realizar as comparações. O primeiro resultado que for verdadeiro acaba com
+# as comparações, ou seja, os outros elif e else dessa corrente de comparações não seram avaliados.
+ 
+if c < a:
+    print("O valor digitado é menor que A")
+elif c == a:
+    print("O valor digitado é igual a A")
+elif c < a:
+    print("O valor digitado é maior que A")
+else:
+    print("O valor digitado é inválido")
+
+# Até a criação deste tutorial, não existe nada parecido com o que conhecemos como switch-case.
+
+# Podemos criar um if dentro de outro if, também conhecido como if aninhado.
+if a <= c <= b:  # Essa notação é usada para saber se o valor c está entre os dois valores especificados.
+    if c > (a + b) / 2:
+        print("O valor digitado está mais próximo de B")
+    elif c < (a + b) / 2:
+        print("O valor digitado está mais próximo de A")
+    elif c == (a + b) / 2:
+        print("O valor digitado está no centro de A e B")
+    else:
+        print("Algo de errado ocorreu.")
+
+# Agora vamos ver como utilizar os operadores booleanos.
+if not c == a:  # o operador not inverte o resultado.
+    print("C não é igual a A")
+if c >= a and c <= b:  # o operador and só retorna verdadeiro se todas as comparações forem verdadeiras.
+    print("C está entre A e B")
+if c == a or c == b:  # o operador or retorna verdadeiro se uma ou mais comparações forem verdadeiras.
+    print("C é igual a A ou B")
+
+# Por último veremos o comparador in
+# função range(x, y, z), cria uma lista com números que começa em x, vai até y (y não incluso) com passo z. 
+if c in range(10):  # se só um valor for passado, começa em zero e vai até o valor especificado.
+    print("C é um número inteiro de 0 a 9")
+```
+
+Aqui vimos como é o funcionamento do fluxo de comparações usando `if`, `elif` e `else`. Esse método é usado 
+principalmente para grandes comparações. Como visto, não utilizamos `;` no final de cada linha de comando e o que separa
+os blocos de função são espaços de indentação, normalmente um tab. Caso algo estranho esteja acontecendo com o seu 
+código Python, existe uma grande chance de ser um erro de indentação.
+
+#### Inline if-else
+
+Outra forma de fazer comparações, nesse caso comparações simples e que necessitam apenas de um `if` e um `else`, podemos
+usar a comparação em linha única. Vamos ver em código como funciona.
+
+```python
+idade = int(input("Digite sua idade: "))  # Convertemos a string para um inteiro agora
+#    faço esse pedaço          se             caso contrário        faço esse
+print("Você é maior de idade") if idade >= 18 else print("Você é menor de idade")
+
+# também podemos usar esse método para colocar algum valor em uma variável
+# retorna    esse  se            senão   esse
+situacao = "maior" if idade >= 18 else "menor"
+print(situacao)  # Para confirmar qual foi escolhido
+```
 
 ### Módulos Python para Data Science
 Python é hoje em dia considerado a linguagem para cientistas de dados, isso se dá pelo fato de ela possuir vários módulos que facilitam a construção do algoritmo além de permitir em alguns casos a utilização de computação em GPU, tornando o processo muito mais rápido. Hoje os principais módulos usados são os seguintes:
