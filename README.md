@@ -386,6 +386,8 @@ if c == a or c == b:  # o operador or retorna verdadeiro se uma ou mais compara�
 # função range(x, y, z), cria uma lista com números que começa em x, vai até y (y não incluso) com passo z. 
 if c in range(10):  # se só um valor for passado, começa em zero e vai até o valor especificado.
     print("C é um número inteiro de 0 a 9")
+# o comparador in também pode ser usado especialmente com o tipo de variável set para saber se um elemento está
+# ou não dentro dele.
 ```
 
 Aqui vimos como é o funcionamento do fluxo de comparações usando `if`, `elif` e `else`. Esse método é usado 
@@ -407,6 +409,25 @@ print("Você é maior de idade") if idade >= 18 else print("Você é menor de id
 # retorna    esse  se            senão   esse
 situacao = "maior" if idade >= 18 else "menor"
 print(situacao)  # Para confirmar qual foi escolhido
+```
+
+### Loops
+
+Nesta sessão iremos falar sobre os tipos de laços de repetições ou loops que existem em Python, que são apenas dois, mas
+muito poderosos e flexíveis. Vamos começar com o mais simple de ser explicado dos dois, o `while`.
+
+#### While
+
+O laço de repetição `while` é normalmente utilizado para casos em que não sabemos quando uma determinada ação repetida
+irá terminar, ou seja, ela não tem uma quantidade específica de vezes que ela deve ser repetida. Dessa forma, é
+necessário que o desenvolvedor implemente uma condição de parada desse loop, caso contrário o programa não irá parar de
+outra forma se não diretamente pelo gerenciador de tarefas. Vamos ver como ele funciona em código.
+
+```python
+valor = float(input("Digite um valor entre 0 e 1: "))
+while not 0 <= valor <= 1:
+    valor = float(input("Digite um valor válido entre 0 e 1: "))
+print(f"O valor digitado foi {valor}!")
 ```
 
 ### Módulos Python para Data Science
