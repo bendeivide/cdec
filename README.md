@@ -420,14 +420,87 @@ muito poderosos e flexíveis. Vamos começar com o mais simple de ser explicado 
 
 O laço de repetição `while` é normalmente utilizado para casos em que não sabemos quando uma determinada ação repetida
 irá terminar, ou seja, ela não tem uma quantidade específica de vezes que ela deve ser repetida. Dessa forma, é
-necessário que o desenvolvedor implemente uma condição de parada desse loop, caso contrário o programa não irá parar de
-outra forma se não diretamente pelo gerenciador de tarefas. Vamos ver como ele funciona em código.
+necessário o desenvolvedor implementar uma condição de parada desse loop, caso contrário o programa não irá parar de
+outra forma se não diretamente pelo gerenciador de tarefas ou por um `break` dentro do loop. Vamos ver como ele funciona em código.
 
 ```python
 valor = float(input("Digite um valor entre 0 e 1: "))
 while not 0 <= valor <= 1:
     valor = float(input("Digite um valor válido entre 0 e 1: "))
 print(f"O valor digitado foi {valor}!")
+
+# O mesmo pode ser feito usando break da seguinte forma.
+while True:
+    valor = float(input("Digite um valor válido entre 0 e 1: "))
+    if 0 <= valor <= 1:
+      break
+print(f"O valor digitado foi {valor}!")
+```
+
+No primeiro laço de repetição, só iremos entrar no loop se a condição for verdadeira. caso contrário, o loop será completamente
+ignorado e o fluxo do código continuará normalmente. Entretanto, no segundo exemplo, iremos entrar no loop pelo menos uma vez,
+já que a condição será sempre verdadeira. Como dito anteriormente, isso pode causar problemas de laço infinito, então precisamos
+colocar uma condição de parada dentro desse loop. Para os mais familiarizados com C/C++, o primeiro exemplo se assemelha com o
+`while` e o segundo com o `do while`.
+
+Além de sair completamente do laço usando o `break`, podemos também pular um único ciclo usando `continue`, dessa forma
+podemos pular partes desnecessárias do código dado uma determinada condição. Vamos ver em código como isso funciona.
+
+```python
+# Vamos pedir um valor para o usuário, se esse valor não for igual o requerido, continuaremos o ciclo pedindo o valor
+# novamente, caso o valor inserido seja correto, seguiremos o fluxo do código faremos aplicaremos uma potência de 2
+# e sairemos do loop com um break.
+while True:
+    valor = float(input("Digite um valor válido entre 0 e 1: "))
+    if 0 > valor > 1:
+      continue
+    valor **= 2
+    break
+print(f"O valor digitado elevado a dois é {valor}!")
+```
+
+Nesse caso, nós poderíamos utilizar apenas um `if else` para resolver esse problema, mas aqui compreendemos como ele pode
+ser usado.
+
+### For
+
+O laço de repetição `for` é provavelmente o mais usado em python. Ele é principalmente utilizado para iterar quantidades
+conhecidas de vezes ou, sobre elementos de uma lista ou objeto iterável (tuple, chaves de dicionários, sets, dataframes, etc).
+Além disso, ele também pode ser usado dentro de uma lista para inicializá-la. Vamos ver como ele funciona em código.
+
+```python
+# Exemplo clássico de todas as linguagens de programação. Vamos contar de 1 até 10 e mostrar os resultados.
+for i in range(1, 11):  # A função range retorna uma lista com os valores de range(início, final, passo)
+    print(i)
+# Também funciona como um for each (para cada elemento, faça...)
+for fruta in ['maçã', 'banana', 'goiaba', 'abacaxi', 'melão']:
+    print(fruta)
+# break e continue também funcionam com for.
+for fruta in ['maçã', 'banana', 'goiaba', 'abacaxi', 'melão']:
+    if fruta == 'banana':  # Se a fruta for banana
+        continue  # Esse loop termina aqui e outro ciclo é iniciado.
+    elif fruta == 'abacaxi':  # Se a fruta for abacaxi
+        break  # O loop é quebrado e os próximos elementos da lista não serão printados!
+    print(fruta)  # Caso nada de cima acontecer, aqui as frutas vão aparecer.
+    
+# Também podemos fazer loops aninhados, ou seja, um loop dentro de outro loop.
+# Aqui temos um exemplo de treinamento da taboada.
+for a in range(1, 11):  # Criamos um loop que vai de 1 à 10 e adicionamos esse valor em "a".
+    for b in range(1, 11):  # Criamos outro loop que vai de 1 à 10 e adicionamos esse valor em "b".
+        # Pedimos pro usuário o valor da operação abaixo e transformamos o resultado em um número inteiro.
+        resultado = int(input(f'Quanto é {a} x {b}? \n'))  # \n é o mesmo que enter, ou quebra de linha.
+        while not resultado == a * b:  # Se o resultado não for correto, entramos num loop while.
+            print("Esse não é o valor correto, tente novamente!")
+            resultado = int(input(f'Quanto é {a} x {b}? \n'))
+        print("Valor correto!")  # Saindo do loop ou não entrando nele, chegamos aqui.
+
+# Agora vamos iniciar uma lista com 10 elementos com valor igual à 0.
+zeros = [0 for _ in range(10)]  # Simples assim
+# Quando o valor que recebemos da lista não importa, podemos usar o character "_" para ignorá-lo, isso é valido em
+# qualquer outro lugar além de loops.
+# Para fazer uma lista bidimensional iniciada com zeros é tão simples quanto o mostrado acima.
+zeros2x2 = [[0 for _ in range(10)] for _ in range(10)]  # Só não é muito intuitivo.
+# O mesmo vale para qualquer outra dimensão. Porém existem outras formas melhores para isso utilizando numpy.
 ```
 
 ### Módulos Python para Data Science
