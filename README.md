@@ -568,7 +568,13 @@ def duplica_triplica(valor: float) -> (float, float):
     """
     Aqui mostramos que iremos retornar uma tuple com dois valores do tipo float.
     """
-    return valor * 2, valor * 3  # Simples assim, apenas separamos por vírgula.
+    return valor * 2.0, valor * 3.0  # Simples assim, apenas separamos por vírgula.
+
+# Depois de definir as funções, precisamos chamá-las.
+a = duplica_triplica(3)  # Só precisamos passar o valor necessário do argumento, se houver.
+# Nesse caso, a variável 'a' terá uma tuple com os valores (6, 9).
+# Também podemos receber o resultado de outra forma.
+b, c = duplica_triplica(4)  # Assim b recebe 8 e c recebe 12.
 ```
 
 ### Módulos Python para Data Science
