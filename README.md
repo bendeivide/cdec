@@ -503,6 +503,74 @@ zeros2x2 = [[0 for _ in range(10)] for _ in range(10)]  # Só não é muito intu
 # O mesmo vale para qualquer outra dimensão. Porém existem outras formas melhores para isso utilizando numpy.
 ```
 
+### Definindo funções em Python
+
+Para definir uma função em Python é muito simples, apenas precisamos utilizar a palavra `def` seguida pelo nome da função
+e parentesis. Assim como os loops, também é necessário adicionar `:` para indicar o começo da função, também precisamos
+lembrar que a identação em Python é essencial para identificar o escopo da função. Vamos ver em código como isso funciona:
+```python
+# Definindo uma função que não faz nada.
+def faz_nada():  # Python não usa Camel Case para funções por convenção, ou seja, fazNada() não seria um bom nome.
+    pass  # Não faz nada, literalmente. pass é muito usado em tratamento de erros (try, catch).
+
+# Agora vamos definir uma função que recebe um valor e duplica ele.
+def print_dobrador(valor):
+    """
+    Documentação de função é feita com três pares de aspas.
+    Esse pedaço funciona da mesma forma que um comentário.
+    -------------------------------------------------------
+    
+    Essa função pode receber qualquer tipo de variável, e vai tentar multiplicar esse valor, caso essa operação
+    não seja possível, o programa vai fechar com um erro do tipo TypeError.
+    """
+    print(valor * 2)
+
+# Agora vamos definir uma função parecida com a de cima mas com algumas coisas extras, e vamos retornar o valor final.
+def dobrador(valor: float) -> float:
+    """
+    Aqui definimos que o valor que queremos é do tipo float, e que retornaremos também um float.
+    Isso é o que gostaríamos, porém, a função ainda recebe qualquer tipo de variável. A diferença, é que agora
+    a IDE que for usada sabe o que esperar daquela variável e além disso, será capaz de identificar potenciais erros.
+    O mesmo vale para o tipo que será retornado pela função. Só serve para ajudar a IDE e manter o programa organizado.
+    """
+    return valor * 2  # Retorna o valor multiplicado por 2.
+
+# Uma função também pode ter um valor default.
+def faz_nada2(valor1: int, valor2: float = 10.0, valor3: str = "Olá") -> None:  # Retorna nada.
+    """
+    Utilizando o sinal de igual (=) podemos atribuir um valor default para qualquer parâmetro da função, porém, todo
+    parâmetro que vier a seguir também precisa ter um valor default.
+    Esse formato também é válido:
+    def faz_nada2(valor = 10)
+    """
+    pass
+
+# Podemos passar quantidades indefinidas de variáveis também.
+def gera_polinomio(*args: float) -> str:
+    """
+    Nessa função, vamos receber valores que correspondem as n constantes de um polinomio e vamos retornar uma
+    string com esse polinomio. O argumento operador * nos permite receber vários argumentos e juntá-los em uma tuple. 
+    """
+    grau = len(args) - 1  # A função len retorna o tamanho de variáveis iteráveis. (list, tuple, str, ...).
+    polinomio = ""  # Inicia uma string vazia.
+    for i in range(grau, -1, -1):  # Contando do grau do polinomio até 0.
+        
+        # Se i não for igual ao grau da função o lado esquerdo do if é retornadp.
+        # O operador += tem o mesmo funcionamento que o código a = a + b. Funciona com os outro operadores também.
+        polinomio += f" + {args[grau - i]}X^{i}" if not i == grau else f"{args[grau - i]}X^{i}"
+    return  polinomio  # Retorna a string com o polinomio.
+
+# Também podemos receber vários pares de chave-valor usando **, mas como essa é uma introdução ao python, não iremos
+# explicar como funcionaria esse caso.
+
+# Por último, nesse tutorial, vamos retornar mais de um valor na mesma função.
+def duplica_triplica(valor: float) -> (float, float):
+    """
+    Aqui mostramos que iremos retornar uma tuple com dois valores do tipo float.
+    """
+    return valor * 2, valor * 3  # Simples assim, apenas separamos por vírgula.
+```
+
 ### Módulos Python para Data Science
 Python é hoje em dia considerado a linguagem para cientistas de dados, isso se dá pelo fato de ela possuir vários módulos que facilitam a construção do algoritmo além de permitir em alguns casos a utilização de computação em GPU, tornando o processo muito mais rápido. Hoje os principais módulos usados são os seguintes:
 * **Numpy:** NumPy é um projeto open source que permite executar computação numérica com Python de forma rápida e fácil, quase todas as ferramentas seguintes, se não todas, usam do poder de computação de arrays e matrizes de Numpy.
