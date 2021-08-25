@@ -577,6 +577,104 @@ a = duplica_triplica(3)  # Só precisamos passar o valor necessário do argument
 b, c = duplica_triplica(4)  # Assim b recebe 8 e c recebe 12.
 ```
 
+### Programação orientada a objeto em Python
+
+Nessa sessão, nós vamos aprofundar um pouco mais em Python utilizando uma estrutura de dados complexa
+muito utilizada também em outras linguagens, conhecida como **classe**. Mas antes disso, vamos compreender um
+pouco o que é programação orientada a objeto (em Python), para isso, vamos primeiro definir o que é um objeto.
+
+Quando programamos em Python, nós utilizamos objetos o tempo todo, apenas não vemos isso claramente. Como
+vimos nos primeiros passos com Python, quando *printamos* na tela qual é o tipo de uma determinada variável,
+nós recebemos como resposta algo do tipo:
+```python
+<class 'float'>
+<class 'int'>
+<class 'str'>
+```
+
+Aqui vemos uma palavra-chave em todas elas, `class` indica a criação de uma classe ou que a variável em questão
+é um **objeto** do tipo especificado assim como mostrado acima. No final das contas, praticamente tudo em Python é
+um objeto, até mesmo uma função é um objeto, ou seja, toda vez que criamos alguma variável ou definimos uma função, 
+por trás dos panos, estamos criando um objeto. Okay, e qual é a diferença entre classe e objeto? Para deixar um pouco
+mais fácil, vamos pensar na classe como sendo uma receita de bolo genérica de qualquer sabor e no objeto como
+sendo o bolo. Dessa forma temos a classe como a definição do objeto, e o objeto sendo o vamos interagir diretamente.
+
+Usando a analogia do bolo e da receita, podemos dizer que esse bolo precisa de ovos, massa pronta de qualquer sabor e 
+leite. Veja bem, não indicamos quantidade e nem o sabor. Esses são atributos da classe bolo que podem ser gravados em
+um objeto. Vamos ver em código como isso funciona:
+
+```python
+# Para criar uma classe, só precisamos usar a palavra-chave class e o nome da classe
+# Por convenção, criamos classes em Python usando letras maiúsculas para todas as primeiras letras
+# Exemplos: Bolo, Carro, Animal, RedeNeural, RedeNeuralRecursiva.
+class Bolo:
+    def __init__(self, sabor: str, ovos: int, leite: float):
+        """
+        __init__ é o que chamamos de construtor em outras linguagens, ele será chamado bem no começo
+        da classe, assim como o nome sugere, ele é o inicializador da classe.
+        
+        self (próprio) é uma palavra-chave para indicar que um objeto está contido, dentro, pertence
+        a esse objeto apenas.
+        
+        Assim como vimos em como definir funções, as funções dentro das classes, ou melhor, métodos,
+        são definidos praticamente da mesma forma, com a diferença que os métodos quando definidos
+        sempre deverão ser inicializados com o argumento self como primeiro argumento.
+        """
+        # Aqui nós armazenamos os valores passados como parâmetro nos atributos desse objeto.
+        # Mais uma vez, o self indica que algo é desse objeto, então self.sabor fala qual o sabor
+        # desse bolo, não o de todos os bolos.
+        self.sabor = sabor
+        self.ovos = ovos
+        self.leite = leite
+        self.assado = False
+
+# Aqui criamos um objeto do tipo bolo, chamado bolo_chocolate.
+bolo_chocolate = Bolo("Chocolate", 3, 500)
+# Podemos mudar os atributos desse bolo assim.
+bolo_chocolate.leite = 450  # Apesar de possível, não é recomendado acessar um atributo dessa forma.
+```
+
+Bom, dessa forma, criamos nossa classe `Bolo` e nosso objeto `bolo_chocolate`, mas eles são quase um
+`dict` do jeito que estão, ainda assim, muito melhor, pois não precisaremos definir a estrutura desse `dict` toda vez que
+criarmos um objeto novo. Agora, vamos criar métodos nessa classe.
+
+```python
+class Bolo:
+    def __init__(self, sabor: str, ovos: int, leite: float):
+        """
+        Mesma classe, só que sem os comentários.
+        """
+        self.sabor = sabor
+        self.ovos = ovos
+        self.leite = leite
+        self.assado = False
+    
+    def qual_sabor(self):  # Lembrando, método sempre tem self como primeiro argumento.
+        # Mesmo fora do escopo do método __init__, temos acesso a todos os atributos da classe
+        # usando self.atributo.
+        print(self.sabor)
+        return self.sabor  # Métodos também podem retornar valores.
+    
+    def bater(self):
+        # Primeiro vamos verificar se as quantidades são as corretas.
+        if self.ovos == 3 or self.leite == 500:
+            print("Batendo...")  # Caso correto
+            return True  # Retornamos True para continuar.
+        else:  # Caso contrário
+            print("Quantidade de ingredientes fornecidos não são compatíveis com a receita")
+            return False  # Retornamos False para cancelar.
+    def assar(self):
+        if self.bater():  # Se o método bater retornar True
+            print("Assando...")  # Assamos o bolo.
+            print("...30 minutos depois...")
+            self.assado = True  # Mudamos o status de assado para True
+
+bolo_chocolate = Bolo("Chocolate", 3, 500)
+# Para acessar um método em um objeto, basta usar . e o nome do método com parêntesis.
+bolo_chocolate.qual_sabor()
+bolo_chocolate.assar()
+```
+
 ### Módulos Python para Data Science
 Python é hoje em dia considerado a linguagem para cientistas de dados, isso se dá pelo fato de ela possuir vários módulos que facilitam a construção do algoritmo além de permitir em alguns casos a utilização de computação em GPU, tornando o processo muito mais rápido. Hoje os principais módulos usados são os seguintes:
 * **Numpy:** NumPy é um projeto open source que permite executar computação numérica com Python de forma rápida e fácil, quase todas as ferramentas seguintes, se não todas, usam do poder de computação de arrays e matrizes de Numpy.
