@@ -673,6 +673,95 @@ bolo_chocolate = Bolo("Chocolate", 3, 500)
 # Para acessar um método em um objeto, basta usar . e o nome do método com parêntesis.
 bolo_chocolate.qual_sabor()
 bolo_chocolate.assar()
+# Por enquanto temos apenas um objeto do tipo bolo. Então vamos criar mais alguns.
+bolo_baunilha = Bolo("Baunilha", 3, 450)  # Criando um objeto tipo Bolo, com sabor Baunilha.
+bolo_cenoura = Bolo("Cenoura", 2, 500)  # Criando um objeto tipo Bolo, com sabor Cenoura.
+# Podemos agora provar que apesar de serem do mesmo tipo, esses objetos têm atributos com
+# valores diferentes.
+bolo_baunilha.qual_sabor()  # Vai dar "Baunilha".
+bolo_cenoura.qual_sabor()  # Vai dar "Cenoura".
+# Se tentarmos assar esses bolos, teremos o erro de quantidade errada de ingredientes.
+bolo_baunilha.assar()
+bolo_cenoura.assar()
+# Se mudarmos os atributos para os valores corretos
+bolo_baunilha.leite = 500
+bolo_cenoura.ovos = 3
+# agora podemos assar sem problemas.
+bolo_baunilha.assar()
+bolo_cenoura.assar()
+```
+
+Aqui vimos como definir uma classe, criar um objeto dessa classe e criar uma estrutura de dados que represente
+o objeto em questão. Mas ainda podemos melhorar essa classe. Por enquanto, nós só podemos fazer um bolo por
+vez, e a receita sempre pede a mesma quantidade de ingredientes. Mas e se quisermos mudar a quantidade de bolos
+ou a receita do bolo mudar com o tempo? Nesse caso teríamos que mudar todos os valores de comparação toda vez que
+mudarmos a receita ou a quantidade de bolos. E se quisermos saber também quantos bolos foram criados? Teriamos
+que criar uma variável para manter a contagem de objetos criados e somar mais 1 toda vez que um novo objeto for criado.
+Isso além de ser trabalhoso, também possui uma grande possibilidade de esquecermos de contar um ou mais objetos.
+Daí temos uma solução muito melhor para resolver esse problema, que são as variáveis estáticas da classe.
+Essas variáveis são compartilhadas por todos os objetos do mesmo tipo, ou seja, o mesmo valor que estiver em 
+`bolo_chocolate` estará em `bolo_baunilha`. Vamos ver como isso funciona em código.
+```python
+class Bolo:
+    """
+    Para criar uma variável estática, basta criarmos ela fora do __init__ e sem a palavra-chave self
+    """
+    quantidade_ovos = 3
+    quantidade_leite = 500
+    quantidade_bolos_por_vez = 1
+    quantidade_bolos_assados = 0
+    
+    def __init__(self, sabor: str, ovos: int, leite: float):
+        """
+        Mesma classe, só que sem os comentários.
+        """
+        self.sabor = sabor
+        self.ovos = ovos
+        self.leite = leite
+        self.assado = False
+    
+    def qual_sabor(self):
+        print(self.sabor)
+        return self.sabor
+    
+    def bater(self):
+        # Para acessar as variáveis estáticas dentro da classe, ainda precisamos usar self
+        # ou o tipo da classe Ex.: Bolo.quantidade_ovos.
+        # Dica: Coloque a condição do if entre parêntesis quando a linha ficar muito grande,
+        # dessa forma podemos quebrar a linha em várias partes.
+        if (self.ovos == self.quantidade_ovos * self.quantidade_bolos_por_vez or
+                self.leite == self.quantidade_leite * self.quantidade_bolos_por_vez):
+            print("Batendo...")
+            return True
+        else:
+            print("Quantidade de ingredientes fornecidos não são compatíveis com a receita")
+            return False
+    def assar(self):
+        if self.bater():
+            print("Assando...")
+            print("...30 minutos depois...")
+            self.assado = True
+            # Para alterar o valor da variável estática, precisamos usar o tipo da classe no lugar
+            # da palavra-chave self ou um método de classe que veremos depois.
+            Bolo.quantidade_bolos_assados += 1  # Soma 1 a quantidade de bolos assados.
+
+# Primeiro vamos manter os valores padrões e vamos verificar se a quantidade de bolos aumenta
+# quando assamos o primeiro bolo.
+bolo_chocolate = Bolo("Chocolate", 3, 500)
+bolo_chocolate.assar()
+
+print(Bolo.quantidade_bolos_assados)  # bolo_chocolate.quantidade_bolos_assados mostra o mesmo valor.
+# Agora vamos mudar a quantidade de bolos por vez.
+Bolo.quantidade_bolos_por_vez = 2
+bolo_baunilha = Bolo("Baunilha", 6, 1000)
+bolo_baunilha.assar()
+print(Bolo.quantidade_bolos_assados)
+# Agora vamos mudar a quantidade de ingredientes para cada bolo.
+Bolo.quantidade_ovos = 4
+Bolo.quantidade_leite = 450
+bolo_cenoura = Bolo("Cenoura", 8, 900)
+bolo_cenoura.assar()
+print(Bolo.quantidade_bolos_assados)
 ```
 
 ### Módulos Python para Data Science
