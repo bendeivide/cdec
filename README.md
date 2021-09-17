@@ -597,7 +597,7 @@ Aqui vemos uma palavra-chave em todas elas, `class` indica a criação de uma cl
 um objeto, até mesmo uma função é um objeto, ou seja, toda vez que criamos alguma variável ou definimos uma função, 
 por trás dos panos, estamos criando um objeto. Okay, e qual é a diferença entre classe e objeto? Para deixar um pouco
 mais fácil, vamos pensar na classe como sendo uma receita de bolo genérica de qualquer sabor e no objeto como
-sendo o bolo. Dessa forma temos a classe como a definição do objeto, e o objeto sendo o vamos interagir diretamente.
+sendo o bolo. Dessa forma temos a classe como a definição do objeto, e o objeto sendo o que vamos interagir diretamente.
 
 Usando a analogia do bolo e da receita, podemos dizer que esse bolo precisa de ovos, massa pronta de qualquer sabor e 
 leite. Veja bem, não indicamos quantidade e nem o sabor. Esses são atributos da classe bolo que podem ser gravados em
@@ -763,6 +763,110 @@ bolo_cenoura = Bolo("Cenoura", 8, 900)
 bolo_cenoura.assar()
 print(Bolo.quantidade_bolos_assados)
 ```
+
+Outra forma de modificarmos as variáveis estáticas de uma classe é usando um método estático que chamamos em 
+Python de método de classe. Para isso, vamos precisar utilizar um decorador para identificar o método como estático.
+Vamos ver em código como isso funciona.
+
+```python
+class Bolo:
+  
+    quantidade_ovos = 3
+    quantidade_leite = 500
+    quantidade_bolos_por_vez = 1
+    quantidade_bolos_assados = 0
+    
+    def __init__(self, sabor: str, ovos: int, leite: float):
+        """
+        Mesma classe, só que sem os comentários.
+        """
+        self.sabor = sabor
+        self.ovos = ovos
+        self.leite = leite
+        self.assado = False
+    
+    def qual_sabor(self):
+        print(self.sabor)
+        return self.sabor
+    
+    def bater(self):
+        if (self.ovos == self.quantidade_ovos * self.quantidade_bolos_por_vez or
+                self.leite == self.quantidade_leite * self.quantidade_bolos_por_vez):
+            print("Batendo...")
+            return True
+        else:
+            print("Quantidade de ingredientes fornecidos não são compatíveis com a receita")
+            return False
+    def assar(self):
+        if self.bater():
+            print("Assando...")
+            print("...30 minutos depois...")
+            self.assado = True
+            Bolo.quantidade_bolos_assados += 1  # Soma 1 a quantidade de bolos assados.
+    
+    @classmethod  # Esse é o decorador do método.
+    def muda_receita(cls, qt_ovos: int, qt_leite: float):
+        """
+        Aqui usamos a palavra chave cls no lugar de self.
+        Essas são as únicas modificações necessárias para criar um método estático.
+        Uma coisa importante é que esse método não tem acesso as variáveis não estáticas.
+        """
+        # Para obter acesso as variáveis da classe, usamos a palavra chave cls.
+        cls.quantidade_ovos = qt_ovos
+        cls.quantidade_leite = qt_leite
+
+
+bolo_chocolate = Bolo("Chocolate", 2, 400)  # Vamos colocar um valor diferente do default
+bolo_chocolate.muda_receita(2, 400)  # e assim mudamos a receita para combinar.
+bolo_chocolate.assar()
+```
+
+Executando o código anterior não gera erro e completa todas as ações com sucesso. Esse tipo de método é
+também usado para criar classes de funções. Por exemplo, temos um banco de dados e queremos organizar as funções
+para realizar mudanças nesse banco num único lugar, para isso podemos criar uma classe que contenha todas as
+ações necessárias. Vemos ver em código como isso funciona.
+
+```python
+# Não veremos como acessar bancos de dados ainda.
+# Aqui nós vamos apenas criar uma classe com métodos estáticos para representar a ideia proposta.
+class DBCore:
+    """
+    Essa é a nossa classe organizadora, ela será usada apenas com esse intuito.
+    """
+    @classmethod  # Não podemos esquecer do decorador.
+    def ler(cls, **kwargs):
+        """
+        Quando recebemos um **kwarg, devemos passar sempre pares de valores, sendo que o
+        primeiro valor do par é a chave do dicionário e o segundo é o valor.
+        Ex: ler("sabor", "chocolate") -> {"sabor" : "chocolate"}
+        """
+        # Lê o banco de dados de acordo com o que foi passado em **kwargs.
+        pass
+    
+    @classmethod
+    def escrever(cls, **kwargs):
+        # Escreve no banco de dados de acordo com o que foi passado em **kwargs.
+        pass
+    
+    @classmethod
+    def delete(cls, **kwargs):
+        # Deleta algo no banco de dados de acordo com o que foi passado em **kwargs.
+        pass
+    
+    @classmethod
+    def atualizar(cls, **kwargs):
+        # Atualiza algo no banco de dados de acordo com o que foi passado em **kwargs.
+        pass
+
+# Dessa forma, podemos acessar todos esses métodos pela classe DBCore.
+# Para abrir um dicionário e separá-lo em chave e valor, utilizamos o operador **
+DBCore.ler(**{"id": 3}) 
+DBCore.escrever(**{"sabor" : "baunilha"})
+DBCore.delete(**{"id" : 1})
+DBCore.atualizar(**{"id" : 5, "sabor": "chocolate"})
+```
+
+Com isso, terminamos a nossa introdução a programação orientada a objeto em Python!
 
 ### Módulos Python para Data Science
 Python é hoje em dia considerado a linguagem para cientistas de dados, isso se dá pelo fato de ela possuir vários módulos que facilitam a construção do algoritmo além de permitir em alguns casos a utilização de computação em GPU, tornando o processo muito mais rápido. Hoje os principais módulos usados são os seguintes:
