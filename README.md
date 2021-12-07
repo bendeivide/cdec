@@ -47,11 +47,11 @@ Temos um curso em desenvolvimento que vale a pena estudar, seguido por vídeo-au
 ### Introdução ao Python
 Por volta dos anos 1980, o holandês [Guido Van Rossum](https://gvanrossum.github.io/), que até então trabalhava no time de desenvolvimento da linguagem ABC no CWI (Centrum Wiskunde & Informatica), o instituto nacional de pesquisa em matemática e ciência da computação da Holanda, se tornaria a principal figura responsável pela criação do Python, uma linguagem de programação com ampla aplicabilidade que atingiu alta popularidade entre desenvolvedores, acadêmicos e empresas (incluindo gigantes como Google, YouTube e Dropbox).
 
-Sucintamente, podemos descrever o Python como uma linguagem de programação open source de alto nível, interpretada, interativa e orientada a objetos. Sua aplicação é bastante versátil e inclui desenvolvimento de aplicativos, páginas da web, análise de dados, automatização de rotinas e até mesmo desenvolvimento de jogos. 
+Sucintamente, podemos descrever o Python como uma linguagem de programação open source de alto nível, interpretada, interativa e orientada a objetos. Sua aplicação é bastante versátil e inclui desenvolvimento de aplicativos, páginas da web, análise de dados, automatização de rotinas e até mesmo desenvolvimento de jogos.
 
 O Python está disponível para muitos sistemas operacionais, incluindo os populares Linux, Mac OS e Windows. A versão mais recente para seu processador e sistema operacional (SO) pode ser encontrada para download na [página oficial do Python](https://www.python.org/).
 
-Após a instalação, você poderá utilizar a linguagem por meio do seu terminal ou prompt de comando, além do IDLE, o ambiente de desenvolvimento integrado (do inglês, Integrated Development Environment, ou IDE) padrão do Python, criado pelo já citado fundador da linguagem, [Guido Van Rossum](https://gvanrossum.github.io/). A utilização de outros IDE's, além do próprio IDLE, podem tornar a experiência com a linguagem mais didática e/ou dinâmica, porém trata-se uma escolha que fica a critério do estudante/programador. Algumas alternativas de IDE's para programação Python são o [Spyder](https://www.spyder-ide.org/), o [Pycharm](https://www.jetbrains.com/pycharm/download/) e o [RStudio](https://www.rstudio.com/products/rstudio/download/). 
+Após a instalação, você poderá utilizar a linguagem por meio do seu terminal ou prompt de comando, além do IDLE, o ambiente de desenvolvimento integrado (do inglês, Integrated Development Environment, ou IDE) padrão do Python, criado pelo já citado fundador da linguagem, [Guido Van Rossum](https://gvanrossum.github.io/). A utilização de outros IDE's, além do próprio IDLE, podem tornar a experiência com a linguagem mais didática e/ou dinâmica, porém trata-se uma escolha que fica a critério do estudante/programador. Algumas alternativas de IDE's para programação Python são o [Spyder](https://www.spyder-ide.org/), o [Pycharm](https://www.jetbrains.com/pycharm/download/) e o [RStudio](https://www.rstudio.com/products/rstudio/download/).
 
 ### Primeiros comandos no Python
 Com o Python já disponível na sua máquina, é o momento de inaugurar a experiência com a linguagem. Tipicamente, o código mais básico para iniciar os estudos é retornar **"Olá, Mundo!"** na tela.
@@ -59,7 +59,7 @@ Com o Python já disponível na sua máquina, é o momento de inaugurar a experi
 
 **Código**
 ```Python
-Print('Ola, Mundo!')
+print('Ola, Mundo!')
 ```
 **Output**
 ```Python
@@ -68,7 +68,7 @@ Ola, Mundo!
 
 Finalmente, temos nosso primeiro programa no Python! É válido citar que as aspas utilizadas podem ser simples ou duplas.
 
-Para a construção de um código bem estruturado, é importantíssimo adicionar comentários conforme o trabalho avança, garantindo que a leitura do programa fique o mais dinâmica possível, permitindo melhor compreensão e facilitando o ajuste de possíveis erros. 
+Para a construção de um código bem estruturado, é importantíssimo adicionar comentários conforme o trabalho avança, garantindo que a leitura do programa fique o mais dinâmica possível, permitindo melhor compreensão e facilitando o ajuste de possíveis erros.
 
 Por padrão, os comentários no Python são inseridos utilizando o símbolo **#** + 1 espaço + comentário. É recomendável utilizar ao menos **2 espaços** entre a última linha de código e um comentário, conforme o exemplo a seguir.
 
@@ -76,18 +76,17 @@ Por padrão, os comentários no Python são inseridos utilizando o símbolo **#*
 **Código**
 ```Python
 var = 'Ola, Mundo!'  # Exemplo de comentário 1
-
-Print(var)  # Exemplo de comentário 2
+print(var)  # Exemplo de comentário 2
 ```
 **Output**
-```Python
+```
 Ola, Mundo!
 ```
 
 Cada código trará suas informações no formato que mais se adeque ao seu objetivo, sendo assim, o Python apresenta diferentes tipos de dados possíveis. Para os primeiros passos, os tipos de dados mais utilizados serão os demonstrados abaixo:
 
 
-* **str:** Dado no formato texto, 'string' representa uma sequência de caracteres
+* **str:** Dado no formato texto, `string` representa uma sequência de caracteres
 
 Exemplos de strings: "Olá, Mundo!", "CDEC", "Python"...
 
@@ -97,18 +96,17 @@ Exemplos de números de tipo integer: 1, -2, -5, 15...
 
 * **float:** Dado numérico no formato "flutuante", apresentando casas decimais após a parte inteira
 
-Exemplos de números de tipo float: 1.20, -13.444, 15.89...
+Exemplos de números de tipo `float`: 1.20, -13.444, 15.89...
 
-* **bool:** Dado no formato "booleano", tendo como característica os valores "True" e "False"
+* **bool:** Dado no formato "booleano", tendo como característica os valores `True` e `False`
 
-Os únicos valores possíveis para uma variável booleana são "True" e "False"
-
-
-A função type( ) pode nos mostrar o tipo de uma variável, enquanto as funções str( ), int( ), float( ) e bool( ) permite fazer os valores transitarem entre diferentes tipos, como pode ser observado nos exemplos abaixo:
+Os únicos valores possíveis para uma variável booleana são `True` e `False`
 
 
-**Código**
-```Python
+A função `type()` pode nos mostrar o tipo da variável, enquanto as funções `str()`, `int()`, `float()` e `bool()`
+permite fazer os valores transitarem entre diferentes tipos, como pode ser observado nos exemplos abaixo:
+
+```Pycon
 >>> a = True
 >>> x = 1
 >>> y = -3.50
@@ -127,20 +125,21 @@ A função type( ) pode nos mostrar o tipo de uma variável, enquanto as funçõ
 -3
 ```
 
-Além dos tipos de variáveis comuns a todas as liguagens de programação explicadas acima, também existem outros tipos
+Além dos tipos de variáveis comuns à todas as liguagens de programação explicada acima, também existem outros tipos
 menos comuns ou exclusivas de Python. Esses outros tipos de variáveis, na grande maioria são relacionados a tipos
 iteráveis, ou seja, que podem conter mais de um único elemento. Esses tipos são:
 
 * `list`: Como o nome sugere, é uma lista onde podemos armazenar vários outros tipos de variáveis, até mesmo outras
-listas;
-  
+  listas;
+
 * `tuple`: É o mesmo que a lista, com a diferença de que ela não pode ser modificada depois que inicializada;
 
 * `dict`: É um tipo de lista que cada elemento possui uma chave e um valor atrelado a ela, também conhecido
   como dicionário;
 
 * `set`: É muito parecido com listas, a diferença é que não é possível mudar os valores contidos nele,
-  mas é possível adicionar novos;
+  mas é possível adicionar novos, além disso, `set` só aceita um elemento do mesmo, ou seja, se outro elemento
+  identico for adicionado ao `set`, ele será descartado;
 
 Agora que sabemos da existência desses tipos de variáveis, vamos analisá-los um pouco mais a fundo separadamente,
 começando com `list`.
@@ -148,10 +147,10 @@ começando com `list`.
 ### List
 
 Como visto anteriormente, `list`s são listas que podem armazenar diferentes elementos. Essas listas são indexadas com
-valores que começam em 0 para o primeiro elemento e n-1 para o último elemento, sendo n 
+valores que começam em 0 para o primeiro elemento e n-1 para o último elemento, sendo n
 o número total de elementos na lista. Agora vamos compreender como
 utilizar esse tipo de variável em código.
-```python
+```pycon
 >>> # O character de hashtag (#) é usado para comentar partes do código e não será executado
 >>> # inicializando uma lista vazia
 >>> a = []
@@ -211,11 +210,11 @@ n-dimensionais, basta continuar criando listas dentro de listas, e colchetes par
 
 ### Tuple
 
-Como visto anteriormente, `tuple`s são listas imutáveis e, por esse motivo ela não tem grande parte das funções que
-foram mostradas na sessão de listas. Entretanto, a criação de uma `tuple` é tão simples quanto a de lista e o acesso é
+Como visto anteriormente, `tuple`s são listas imutáveis e, por esse motivo ela não tem grande parte das funções
+mostradas na sessão de listas. Entretanto, a criação de uma `tuple` é tão simples quanto a de lista e o acesso é
 idêntico.
 
-```python
+```pycon
 >>> # Criando uma tuple
 >>> a = (1, 3.1415926, 'python', True)
 >>> # Acessando elementos
@@ -236,10 +235,10 @@ nela, o programa levanta um erro.
 ### Dict
 
 Também visto anteriormente, `dict` ou dicionários são um outro tipo de lista que possuem pares de chaves e valores
-(key, value), dessa forma conseguimos acessar um determinado elemento não pelo seu índice, mas pela sua chave. Veremos
-agora como utilizar `dict`s em código.
+`{"key": value}`, dessa forma conseguimos acessar um determinado elemento não pelo seu índice, mas pela sua chave.
+Veremos agora como utilizar `dict`s em código.
 
-```python
+```pycon
 >>> # Inicializando um dict vazio.
 >>> a = {}
 >>> # Inicializando um dict com chaves e valores.
@@ -272,9 +271,10 @@ Veremos mais utilidades de dicionários na sessão de loops.
 ### Set
 
 Como visto anteriormente, `set` é muito parecido com listas, a diferença é que não é possível mudar os valores
-contidos nele, mas é possível adicionar novos. Vamos ver em código como isso funciona.
+contidos nele, mas podemos adicionar novos. Lembrando, um mesmo elemento não será adicionado ao `set`.
+Vamos ver em código como isso funciona.
 
-```python
+```pycon
 >>> # Inicializando um set
 >>> a = {'Python', 3.9, 'dev'}
 >>> # Adicionando um item ao set
@@ -287,17 +287,17 @@ contidos nele, mas é possível adicionar novos. Vamos ver em código como isso 
 {'Python', 'dev', 3.9, 'test'}
 >>> # Juntando dois sets
 >>> b = {1, 2, 3}
->>> a.update(b)  # Funciona com qualquer tipo iterável
+>>> a.update(b)  # Funciona com qualquer tipo iterável.
 >>> a
 {'dev', 1, 3.9, 'test', 2, 3, 'Python'}
 >>> # Removendo um item do set
->>> a.remove('test')  # Se o item especificado não existir, irá ocorrer um erro.
+>>> a.remove('test')  # Se o item especificado não existir, ocorrerá um erro.
 >>> a
 {'dev', 1, 3.9, 2, 3, 'Python'}
->>> a.discard('dev')  # Se o item especificado não existir, NÃO irá ocorrer um erro.
+>>> a.discard('dev')  # Se o item especificado não existir, NÃO ocorrerá um erro.
 >>> a
 {1, 3.9, 2, 3, 'Python'}
->>> b = a.pop()  # Remove o primeiro item e retorna esse item.
+>>> b = a.pop()  # Remove o primeiro item e o retorna.
 >>> b
 1
 >>> a
@@ -314,10 +314,10 @@ Nessa sessão veremos como são usadas condições em Python. Veremos dois tipos
 
 #### if, elif e else
 
-Assim como todas as outras linguagens mais conhecidas, Python também utiliza da notação `if` e `else` para criar
-condições. Entretanto, o que outras linguagens usam como `else if`, Python fez uma abreviação para `elif`. Além disso,
-outra coisa muito importante é que Python não utiliza chaves `{}` como indicador de bloco de comando, ele utiliza a
-própria indentação para dizer qual parte do código é pertencente ao bloco de comando, ou escopo. Vamos ver em código
+Como as outras linguagens mais conhecidas, Python também usa a notação `if` e `else` para criar
+condições, entretanto, o que outras linguagens usam como `else if`, Python abrevia para `elif`.
+Outra coisa muito importante é que Python não utiliza chaves `{}` como indicador de bloco de comando (escopo),
+ele utiliza a própria identação para dizer qual parte do código é pertencente ao escopo. Vamos ver em código
 como tudo isso funciona.
 
 ```python
@@ -351,7 +351,7 @@ c = float(c)  # Como o que recebemos é uma string, vamos convertê-la para floa
 
 # Podemos usar vários elif para realizar as comparações. O primeiro resultado que for verdadeiro acaba com
 # as comparações, ou seja, os outros elif e else dessa corrente de comparações não seram avaliados.
- 
+
 if c < a:
     print("O valor digitado é menor que A")
 elif c == a:
@@ -360,8 +360,6 @@ elif c < a:
     print("O valor digitado é maior que A")
 else:
     print("O valor digitado é inválido")
-
-# Até a criação deste tutorial, não existe nada parecido com o que conhecemos como switch-case.
 
 # Podemos criar um if dentro de outro if, também conhecido como if aninhado.
 if a <= c <= b:  # Essa notação é usada para saber se o valor c está entre os dois valores especificados.
@@ -390,10 +388,10 @@ if c in range(10):  # se só um valor for passado, começa em zero e vai até o 
 # ou não dentro dele.
 ```
 
-Aqui vimos como é o funcionamento do fluxo de comparações usando `if`, `elif` e `else`. Esse método é usado 
+Aqui vimos como é o funcionamento do fluxo de comparações usando `if`, `elif` e `else`. Esse método é usado
 principalmente para grandes comparações. Como visto, não utilizamos `;` no final de cada linha de comando e o que separa
-os blocos de função são espaços de indentação, normalmente um tab. Caso algo estranho esteja acontecendo com o seu 
-código Python, existe uma grande chance de ser um erro de indentação.
+os blocos de função são espaços de identação, normalmente um tab. Caso algo estranho esteja acontecendo com o seu
+código Python, existe uma grande chance de ser um erro de identação.
 
 #### Inline if-else
 
@@ -405,16 +403,50 @@ idade = int(input("Digite sua idade: "))  # Convertemos a string para um inteiro
 #    faço esse pedaço          se             caso contrário        faço esse
 print("Você é maior de idade") if idade >= 18 else print("Você é menor de idade")
 
-# também podemos usar esse método para colocar algum valor em uma variável
+# também podemos usar esse método para colocar algum valor numa variável
 # retorna    esse  se            senão   esse
 situacao = "maior" if idade >= 18 else "menor"
 print(situacao)  # Para confirmar qual foi escolhido
 ```
+#### Match case
+
+A partir da versão 3.10 do Python, foi adicionado um novo método para fazer comparações que se assemelha com o que
+conhecemos nas outras linguagens como switch case. Essa função é chamada de `match`, ela funciona como uma cadeia de
+`if-else` tendo uma variável para realizar as comparações. Essa variável passa por `case`s de cima para baixo e o `case`
+que combinar (match) será o executado. Vamos ver em código como isso funciona:
+
+```python
+# Vamos receber um valor representando a escolha do usuário.
+valor = input("""
+Escolha um animal:
+1 - Cachorro
+2 - Gato
+3 - Hamster
+4 - Cavalo
+""")
+
+# Poderíamos usar uma cadeia de if else para identificar o animal escolhido,
+# mas, match é mais fácil de usar em casos de múltiplas escolhas.
+match valor:
+    # Como não convertemos valor para int, podemos comparar com str. 
+    case '1':
+        print("Você escolheu Cachorro!")
+    case '2':
+        print("Você escolheu Gato!")
+    case '3':
+        print("Você escolheu Hamster!")
+    case '4':
+        print("Você escolheu Cavalo!")
+```
+
+Diferente das outras linguagens, não é necessário colocar um `break` depois de cada `case`. O primeiro que for encontrado
+será o único executado. Os valores comparados em cada `case` não precisam ser do mesmo tipo, isso nos permite,
+por exemplo, identificar o tipo da variável e executar a função correta. Veremos funções mais adiante.
 
 ### Loops
 
-Nesta sessão iremos falar sobre os tipos de laços de repetições ou loops que existem em Python, que são apenas dois, mas
-muito poderosos e flexíveis. Vamos começar com o mais simple de ser explicado dos dois, o `while`.
+Nesta sessão falaremos sobre os tipos de laços de repetições ou loops existentes em Python, que são apenas dois, mas
+muito poderosos e flexíveis. Vamos começar com o mais simples de ser explicado dos dois, o `while`.
 
 #### While
 
@@ -433,7 +465,7 @@ print(f"O valor digitado foi {valor}!")
 while True:
     valor = float(input("Digite um valor válido entre 0 e 1: "))
     if 0 <= valor <= 1:
-      break
+        break
 print(f"O valor digitado foi {valor}!")
 ```
 
@@ -453,7 +485,7 @@ podemos pular partes desnecessárias do código dado uma determinada condição.
 while True:
     valor = float(input("Digite um valor válido entre 0 e 1: "))
     if 0 > valor > 1:
-      continue
+        continue
     valor **= 2
     break
 print(f"O valor digitado elevado a dois é {valor}!")
@@ -482,7 +514,7 @@ for fruta in ['maçã', 'banana', 'goiaba', 'abacaxi', 'melão']:
     elif fruta == 'abacaxi':  # Se a fruta for abacaxi
         break  # O loop é quebrado e os próximos elementos da lista não serão printados!
     print(fruta)  # Caso nada de cima acontecer, aqui as frutas vão aparecer.
-    
+
 # Também podemos fazer loops aninhados, ou seja, um loop dentro de outro loop.
 # Aqui temos um exemplo de treinamento da taboada.
 for a in range(1, 11):  # Criamos um loop que vai de 1 à 10 e adicionamos esse valor em "a".
@@ -554,7 +586,7 @@ def gera_polinomio(*args: float) -> str:
     grau = len(args) - 1  # A função len retorna o tamanho de variáveis iteráveis. (list, tuple, str, ...).
     polinomio = ""  # Inicia uma string vazia.
     for i in range(grau, -1, -1):  # Contando do grau do polinomio até 0.
-        
+
         # Se i não for igual ao grau da função o lado esquerdo do if é retornadp.
         # O operador += tem o mesmo funcionamento que o código a = a + b. Funciona com os outro operadores também.
         polinomio += f" + {args[grau - i]}X^{i}" if not i == grau else f"{args[grau - i]}X^{i}"
@@ -594,12 +626,12 @@ nós recebemos como resposta algo do tipo:
 
 Aqui vemos uma palavra-chave em todas elas, `class` indica a criação de uma classe ou que a variável em questão
 é um **objeto** do tipo especificado assim como mostrado acima. No final das contas, praticamente tudo em Python é
-um objeto, até mesmo uma função é um objeto, ou seja, toda vez que criamos alguma variável ou definimos uma função, 
+um objeto, até mesmo uma função é um objeto, ou seja, toda vez que criamos alguma variável ou definimos uma função,
 por trás dos panos, estamos criando um objeto. Okay, e qual é a diferença entre classe e objeto? Para deixar um pouco
 mais fácil, vamos pensar na classe como sendo uma receita de bolo genérica de qualquer sabor e no objeto como
 sendo o bolo. Dessa forma temos a classe como a definição do objeto, e o objeto sendo o que vamos interagir diretamente.
 
-Usando a analogia do bolo e da receita, podemos dizer que esse bolo precisa de ovos, massa pronta de qualquer sabor e 
+Usando a analogia do bolo e da receita, podemos dizer que esse bolo precisa de ovos, massa pronta de qualquer sabor e
 leite. Veja bem, não indicamos quantidade e nem o sabor. Esses são atributos da classe bolo que podem ser gravados em
 um objeto. Vamos ver em código como isso funciona:
 
@@ -648,13 +680,13 @@ class Bolo:
         self.ovos = ovos
         self.leite = leite
         self.assado = False
-    
+
     def qual_sabor(self):  # Lembrando, método sempre tem self como primeiro argumento.
         # Mesmo fora do escopo do método __init__, temos acesso a todos os atributos da classe
         # usando self.atributo.
         print(self.sabor)
         return self.sabor  # Métodos também podem retornar valores.
-    
+
     def bater(self):
         # Primeiro vamos verificar se as quantidades são as corretas.
         if self.ovos == 3 or self.leite == 500:
@@ -699,7 +731,7 @@ mudarmos a receita ou a quantidade de bolos. E se quisermos saber também quanto
 que criar uma variável para manter a contagem de objetos criados e somar mais 1 toda vez que um novo objeto for criado.
 Isso além de ser trabalhoso, também possui uma grande possibilidade de esquecermos de contar um ou mais objetos.
 Daí temos uma solução muito melhor para resolver esse problema, que são as variáveis estáticas da classe.
-Essas variáveis são compartilhadas por todos os objetos do mesmo tipo, ou seja, o mesmo valor que estiver em 
+Essas variáveis são compartilhadas por todos os objetos do mesmo tipo, ou seja, o mesmo valor que estiver em
 `bolo_chocolate` estará em `bolo_baunilha`. Vamos ver como isso funciona em código.
 ```python
 class Bolo:
@@ -710,7 +742,7 @@ class Bolo:
     quantidade_leite = 500
     quantidade_bolos_por_vez = 1
     quantidade_bolos_assados = 0
-    
+
     def __init__(self, sabor: str, ovos: int, leite: float):
         """
         Mesma classe, só que sem os comentários.
@@ -719,11 +751,11 @@ class Bolo:
         self.ovos = ovos
         self.leite = leite
         self.assado = False
-    
+
     def qual_sabor(self):
         print(self.sabor)
         return self.sabor
-    
+
     def bater(self):
         # Para acessar as variáveis estáticas dentro da classe, ainda precisamos usar self
         # ou o tipo da classe Ex.: Bolo.quantidade_ovos.
@@ -764,18 +796,18 @@ bolo_cenoura.assar()
 print(Bolo.quantidade_bolos_assados)
 ```
 
-Outra forma de modificarmos as variáveis estáticas de uma classe é usando um método estático que chamamos em 
+Outra forma de modificarmos as variáveis estáticas de uma classe é usando um método estático que chamamos em
 Python de método de classe. Para isso, vamos precisar utilizar um decorador para identificar o método como estático.
 Vamos ver em código como isso funciona.
 
 ```python
 class Bolo:
-  
+
     quantidade_ovos = 3
     quantidade_leite = 500
     quantidade_bolos_por_vez = 1
     quantidade_bolos_assados = 0
-    
+
     def __init__(self, sabor: str, ovos: int, leite: float):
         """
         Mesma classe, só que sem os comentários.
@@ -784,11 +816,11 @@ class Bolo:
         self.ovos = ovos
         self.leite = leite
         self.assado = False
-    
+
     def qual_sabor(self):
         print(self.sabor)
         return self.sabor
-    
+
     def bater(self):
         if (self.ovos == self.quantidade_ovos * self.quantidade_bolos_por_vez or
                 self.leite == self.quantidade_leite * self.quantidade_bolos_por_vez):
@@ -803,7 +835,7 @@ class Bolo:
             print("...30 minutos depois...")
             self.assado = True
             Bolo.quantidade_bolos_assados += 1  # Soma 1 a quantidade de bolos assados.
-    
+
     @classmethod  # Esse é o decorador do método.
     def muda_receita(cls, qt_ovos: int, qt_leite: float):
         """
@@ -842,17 +874,17 @@ class DBCore:
         """
         # Lê o banco de dados de acordo com o que foi passado em **kwargs.
         pass
-    
+
     @classmethod
     def escrever(cls, **kwargs):
         # Escreve no banco de dados de acordo com o que foi passado em **kwargs.
         pass
-    
+
     @classmethod
     def delete(cls, **kwargs):
         # Deleta algo no banco de dados de acordo com o que foi passado em **kwargs.
         pass
-    
+
     @classmethod
     def atualizar(cls, **kwargs):
         # Atualiza algo no banco de dados de acordo com o que foi passado em **kwargs.
@@ -860,7 +892,7 @@ class DBCore:
 
 # Dessa forma, podemos acessar todos esses métodos pela classe DBCore.
 # Para abrir um dicionário e separá-lo em chave e valor, utilizamos o operador **
-DBCore.ler(**{"id": 3}) 
+DBCore.ler(**{"id": 3})
 DBCore.escrever(**{"sabor" : "baunilha"})
 DBCore.delete(**{"id" : 1})
 DBCore.atualizar(**{"id" : 5, "sabor": "chocolate"})
@@ -876,10 +908,10 @@ Python é hoje em dia considerado a linguagem para cientistas de dados, isso se 
 * **TensorFlow:** TensorFlow é um módulo Python open source para machine learning. Ele tem um ecossistema abrangente e flexível de ferramentas, bibliotecas e recursos da comunidade que permite aos pesquisadores levar adiante ML de última geração e aos desenvolvedores criar e implantar aplicativos com tecnologia de ML.
 * **Keras:** Keras é uma API desenvolvida para facilitar o desenvolvimento de modelos de machine learning diminuindo o número de ações que o usuário necessita fazer para casos comuns, além de mostrar mensagens de erro claras e que permitem encontrar a causa de forma mais fácil. Keras também possui uma documentação extensa e guias para o desenvolvedor. Hoje em dia é considerado uma das 5 melhores para deep learning.
 * **PyTorch:** Assim como TensorFlow, PyTorch é um módulo Python open source para machine learning. Ele é baseado na biblioteca Torch que também está disponível para C++.
-* **Pandas:** Pandas é uma ferramenta open source essencial para análise de dados em Python. Ele é rápido, flexível e fácil de usar. Com ele é possível fazer a criação e manipulação de Data Frames, além de poder fazer um resumo estatístico do Data Frame com um único comando. 
+* **Pandas:** Pandas é uma ferramenta open source essencial para análise de dados em Python. Ele é rápido, flexível e fácil de usar. Com ele é possível fazer a criação e manipulação de Data Frames, além de poder fazer um resumo estatístico do Data Frame com um único comando.
 ### Introdução ao Numpy
 Primeiramente, antes de usar o módulo numpy, é necessário que ele esteja instalado no computador ou virtual environment
-de desenvolvimento. Para isso, assim como quase todos os módulos para Python, podemos fazer essa instalação utilizando o 
+de desenvolvimento. Para isso, assim como quase todos os módulos para Python, podemos fazer essa instalação utilizando o
 `pip` ou `conda`.
 
 `pip install numpy` ou `conda install numpy`
@@ -892,9 +924,9 @@ import numpy as np
 Essa é a forma que o módulo numpy é normalmente importado. Esse código nos permite escrever apenas `np` quando formos
 utilizar alguma função Numpy, esse mesmo formato será visto posteriormente.
 
-Numpy contem arrays multidimensionais e matrizes como estrutura de dados. Ele disponibiliza um tipo de dado chamado 
+Numpy contem arrays multidimensionais e matrizes como estrutura de dados. Ele disponibiliza um tipo de dado chamado
 `ndarray` que como o nome sugere, é um array multidimensional. Esse tipo de dado contém vários métodos para fazer
-operações sobre ele de forma eficiente e facilmente, a maioria das vezes mais rápido que listas nativas do Python. 
+operações sobre ele de forma eficiente e facilmente, a maioria das vezes mais rápido que listas nativas do Python.
 `ndarray` juntamente com Numpy, adicionam estruturas de dados cálculos eficientes com arrays e matrizes e ainda
 disponibilizam uma grande gama de funções matemáticas de alto nível que operam nesses arrays e matrizes.
 
@@ -926,7 +958,7 @@ array([  0.,  -2.,  -6., -12., -20., -30., -42., -56., -72., -90.])
 >>> f = e / d
 >>> f
 array([ 0.        , -0.5       , -0.66666667, -0.75      , -0.8       ,
-       -0.83333333, -0.85714286, -0.875     , -0.88888889, -0.9       ])
+        -0.83333333, -0.85714286, -0.875     , -0.88888889, -0.9       ])
 ```
 Para criar `ndarrays` multidimensionais existem algumas formas, como usar uma lista
 Python multidemensional ou simplesmente iniciar um `ndarray` com valores aleatórios. Esses não são os
@@ -960,10 +992,10 @@ array([[3.535074e-317, 0.000000e+000],
 >>> a = np.random.rand(3)  # Vetor agora com 3 números aleatórios
 >>> a * h  # Essa operação gera erro
 Traceback (most recent call last):
-  File "/usr/lib/python3.8/code.py", line 90, in runcode
-    exec(code, self.locals)
-  File "<input>", line 1, in <module>
-ValueError: operands could not be broadcast together with shapes (3,) (2,2) 
+File "/usr/lib/python3.8/code.py", line 90, in runcode
+exec(code, self.locals)
+File "<input>", line 1, in <module>
+ValueError: operands could not be broadcast together with shapes (3,) (2,2)
 
 ```
 
@@ -1030,15 +1062,15 @@ de um dicionário Python e outro importando de um CSV.
 >>> # Cria um dicionário com as chaves iguais ao nome das colunas e com os valores
 >>> # iguais a listas de valores.
 >>> dict_data = {"a": [1, 2, 3],
-...              "b": [4, 5, 6],
-...              "c": [7, 8, 9]}
+                 ...              "b": [4, 5, 6],
+                                       ...              "c": [7, 8, 9]}
 >>> # (Opcional) Cria uma lista de nomes para os índices.
 >>> index = ["experimento 1", "experimento 2", "experimento 3"]
 >>> # Cria o DataFrame passando o dicionário como primeiro parâmetro e a lista
 >>> # de índices como segundo parâmetro
 >>> dict_data_frame = pd.DataFrame(dict_data, index=index)
 >>> dict_data_frame
-               a  b  c
+a  b  c
 experimento 1  1  4  7
 experimento 2  2  5  8
 experimento 3  3  6  9
@@ -1056,7 +1088,7 @@ Agora veremos como importar um CSV como DataFrame usando **Pandas**
 >>> # Utilizamos a função read_csv(local do arquivo, separador, index_col=índice ou nome da coluna)
 >>> csv_data_frame = pd.read_csv('./recursos/introducao pandas/csvData.csv', ";", index_col=0)
 >>> csv_data_frame
-               a  b  c
+a  b  c
 Experimento 1  1  4  7
 Experimento 2  2  5  8
 Experimento 3  3  6  9
