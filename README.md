@@ -62,7 +62,7 @@ Com o Python já disponível na sua máquina, é o momento de inaugurar a experi
 print('Ola, Mundo!')
 ```
 **Output**
-```Python
+```
 Ola, Mundo!
 ```
 
@@ -469,8 +469,8 @@ while True:
 print(f"O valor digitado foi {valor}!")
 ```
 
-No primeiro laço de repetição, só iremos entrar no loop se a condição for verdadeira. caso contrário, o loop será completamente
-ignorado e o fluxo do código continuará normalmente. Entretanto, no segundo exemplo, iremos entrar no loop pelo menos uma vez,
+No primeiro laço de repetição, só entraremos no loop se a condição for verdadeira, caso contrário, o loop será completamente
+ignorado e o fluxo do código continuará normalmente, entretanto, no segundo exemplo, pelo menos um loop será executado,
 já que a condição será sempre verdadeira. Como dito anteriormente, isso pode causar problemas de laço infinito, então precisamos
 colocar uma condição de parada dentro desse loop. Para os mais familiarizados com C/C++, o primeiro exemplo se assemelha com o
 `while` e o segundo com o `do while`.
@@ -491,14 +491,46 @@ while True:
 print(f"O valor digitado elevado a dois é {valor}!")
 ```
 
-Nesse caso, nós poderíamos utilizar apenas um `if else` para resolver esse problema, mas aqui compreendemos como ele pode
+Nesse caso, nós poderíamos utilizar apenas um `if else` para resolver esse problema, porem aqui compreendemos como ele pode
 ser usado.
+
+Outra coisa não muito comum dos loops em Python é a de podermos usar um `else` com eles. Apesar de incomum, isso nos
+permite criar lógicas mais complexas conforme a necessidade. Vamos ver em código como isso funciona:
+
+```python
+# Não criaremos aqui um código complexo. Apenas veremos como utilizar o else após um loop.
+# Vamos usar um dos exemplos anteriores.
+valor = float(input("Digite um valor entre 0 e 1: "))
+while not 0 <= valor <= 1:
+    valor = float(input("Digite um valor válido entre 0 e 1: "))
+else:
+    # Esse bloco sempre será executado quando o loop anterior terminar.
+    # Porem, isso não útil dessa forma. 
+    print(f"O valor digitado foi {valor}!")
+
+# Se usarmos o loop anterior, mas agora adicionando uma condição que leva a um break,
+# veremos como essa junção pode ser interessante.
+valor = float(input("Digite um valor entre 0 e 1: "))
+while not 0 <= valor <= 1:
+    valor = float(input("Digite um valor entre 0 e 1 ou -1 para sair: "))
+    if valor < 0:  # Como estamos comparando floats, vamos considerar qualquer valor menor que zero.
+        print("Saindo...")
+        break
+else:
+    # Como dito anteriormente, esse bloco sempre será executado quando o loop anterior terminar,
+    # mas SOMENTE se ele terminar, ou seja, se ele for terminado por um break esse print não será
+    # exibido.
+    print(f"O valor digitado foi {valor}!")
+```
+
+Usando essa técnica nós podemos executar diferentes códigos no caso do loop ser completamente executado e,
+também no caso de o loop ser interrompido.
 
 ### For
 
-O laço de repetição `for` é provavelmente o mais usado em python. Ele é principalmente utilizado para iterar quantidades
-conhecidas de vezes ou, sobre elementos de uma lista ou objeto iterável (tuple, chaves de dicionários, sets, dataframes, etc).
-Além disso, ele também pode ser usado dentro de uma lista para inicializá-la. Vamos ver como ele funciona em código.
+O laço de repetição `for` é provavelmente o mais usado em Python. Ele é principalmente utilizado para iterar quantidades
+conhecidas de vezes ou, sobre elementos duma lista ou objeto iterável (tuple, chaves de dicionários, sets, dataframes, etc).
+Além disso, ele também pode ser usado dentro duma lista para a inicializar. Vamos ver como ele funciona em código.
 
 ```python
 # Exemplo clássico de todas as linguagens de programação. Vamos contar de 1 até 10 e mostrar os resultados.
@@ -516,9 +548,9 @@ for fruta in ['maçã', 'banana', 'goiaba', 'abacaxi', 'melão']:
     print(fruta)  # Caso nada de cima acontecer, aqui as frutas vão aparecer.
 
 # Também podemos fazer loops aninhados, ou seja, um loop dentro de outro loop.
-# Aqui temos um exemplo de treinamento da taboada.
-for a in range(1, 11):  # Criamos um loop que vai de 1 à 10 e adicionamos esse valor em "a".
-    for b in range(1, 11):  # Criamos outro loop que vai de 1 à 10 e adicionamos esse valor em "b".
+# Aqui temos um exemplo de treinamento da tabuada.
+for a in range(1, 11):  # Criamos um loop que vai de 1 a 10 e adicionamos esse valor em "a".
+    for b in range(1, 11):  # Criamos outro loop que vai de 1 a 10 e adicionamos esse valor em "b".
         # Pedimos pro usuário o valor da operação abaixo e transformamos o resultado em um número inteiro.
         resultado = int(input(f'Quanto é {a} x {b}? \n'))  # \n é o mesmo que enter, ou quebra de linha.
         while not resultado == a * b:  # Se o resultado não for correto, entramos num loop while.
@@ -532,7 +564,94 @@ zeros = [0 for _ in range(10)]  # Simples assim
 # qualquer outro lugar além de loops.
 # Para fazer uma lista bidimensional iniciada com zeros é tão simples quanto o mostrado acima.
 zeros2x2 = [[0 for _ in range(10)] for _ in range(10)]  # Só não é muito intuitivo.
-# O mesmo vale para qualquer outra dimensão. Porém existem outras formas melhores para isso utilizando numpy.
+# O mesmo vale para qualquer outra dimensão, porém existem outras formas melhores para isso utilizando numpy.
+```
+
+Com o `for` nós também podemos usar `else` como mostrado no `while`. Vamos ver um exemplo simples:
+
+```python
+# Só a fins didáticos, vamos criar um loop de 0 a 9 e printar todos os valores menores que 7,
+# caso o valor for maior, terminaremos o loop com um break.
+for i in range(10):
+    if i >= 7:
+        break
+    print(i)
+else:
+    print("Esse bloco nunca será executado...")
+
+# Se tirarmos o break do loop, o else sempre será executado quando o loop terminar.
+for i in range(10):
+    print(i)
+else:
+    print("Esse bloco sempre será executado...")
+```
+
+### Tratamento de erros
+
+Nessa sessão entenderemos como tratar erros e impedir que o programa simplesmente feche quando algum erro conhecido
+ocorrer. Para isso, usaremos uma estrutura muito conhecida e utilizada nas outras linguagens de programação, conhecida
+como `try-catch`, em Python `catch` é chamado `except` e temos duas outras palavras, `else` e `finally`. Vamos ver como
+tudo isso funciona em código:
+
+```python
+# Primeiro vamos analisar o que cada keyword faz.
+try:
+    # Como o nome sugere, tenta executar um código
+    print("Tentando executar...")
+except:
+    # Caso algo errado acontecer no código executado em try, esse bloco será executado
+    # Obs.: Nunca use apenas except, sempre especifique qual o tipo de erro a ser tratado...
+    print("Deu erro no try...")
+else:
+    # Esse bloco só será executado se não houver erro no try.
+    print("Não deu erro no try...")
+finally:
+    # Esse bloco SEMPRE será executado, não importando se deu erro no try ou não.
+    # Uma das possíveis utilizações é para fechar arquivos, criar logs ou coisas semelhantes.
+    # Esse bloco só não será executado no caso do programa ser fechado forçadamente.
+    # Ex.: os._exit()
+    print("Sempre executado...")
+
+# Não é necessário utilizar todas as keywords, apenas quando precisa.
+# Para os casos mais genéricos, try e except são os únicos usados.
+# Vamos ver um exemplo simples para tratar divisão por zero.
+
+a = float(input("Digite um número: "))
+b = float(input("Digite outro número: "))
+try:
+    # Vamos tentar dividir "a" por "b"
+    print(f"{a} dividido por {b} é: {a / b}")
+except Exception as e:
+    # Aqui chamamos a exceção de "e" e verificamos se ela é do tipo ZeroDivisionError.
+    # Se outro erro for encontrado, por exemplo ValueError, o código será fechado.
+    if type(e) == ZeroDivisionError:
+        # Se essa condição for verdadeira, o print abaixo é executado e o programa continua
+        # sua execução normalmente.
+        print("Divisão por 0 é indeterminada.")
+
+        
+# Agora vamos utilizar o else para adicionar elementos a uma lista apenas se não houver erros.
+sair = False
+while not sair:
+    # Enquanto a opção sair não for verdadeira, continuaremos o loop.
+    try:
+        a = float(input("Digite um número: "))
+        b = float(input("Digite outro número: "))
+        # Vamos tentar dividir "a" por "b" guardar em "c"
+        c = a / b
+    except Exception as e:
+        if type(e) == ZeroDivisionError:
+            print("Divisão por 0 é indeterminada.")
+        # Vamos verificar ValueError também
+        if type(e) == ValueError:
+            print("Valor digitado não é válido!")
+    else:
+        # Se não ocorrer nenhum erro no try, printamos o resultado de "c".
+        print(f"O valor da divisão de {a} por {b} é {c}")
+    # Agora vamos perguntar se o usuário deseja sair.
+    # Se o valor digitado pelo usuário fizer parte dos valores contidos na lista,
+    # sair vai receber True.
+    sair = input("Digite S para sair ou N para continuar.") in ['s', 'S', 'sim']
 ```
 
 ### Definindo funções em Python
