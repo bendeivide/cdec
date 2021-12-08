@@ -406,7 +406,7 @@ print("Você é maior de idade") if idade >= 18 else print("Você é menor de id
 # também podemos usar esse método para colocar algum valor numa variável
 # retorna    esse  se            senão   esse
 situacao = "maior" if idade >= 18 else "menor"
-print(situacao)  # Para confirmar qual foi escolhido
+print(situacao)  # Para confirmar qual foi escolhido.
 ```
 #### Match case
 
@@ -426,7 +426,7 @@ Escolha um animal:
 """)
 
 # Poderíamos usar uma cadeia de if else para identificar o animal escolhido,
-# mas, match é mais fácil de usar em casos de múltiplas escolhas.
+# mas, match é mais usado em casos de múltiplas escolhas.
 match valor:
     # Como não convertemos valor para int, podemos comparar com str. 
     case '1':
@@ -445,15 +445,16 @@ por exemplo, identificar o tipo da variável e executar a função correta. Vere
 
 ### Loops
 
-Nesta sessão falaremos sobre os tipos de laços de repetições ou loops existentes em Python, que são apenas dois, mas
+Nesta sessão falaremos sobre os tipos de laços de repetições ou loops existentes em Python, apenas dois, mas
 muito poderosos e flexíveis. Vamos começar com o mais simples de ser explicado dos dois, o `while`.
 
 #### While
 
 O laço de repetição `while` é normalmente utilizado para casos em que não sabemos quando uma determinada ação repetida
-irá terminar, ou seja, ela não tem uma quantidade específica de vezes que ela deve ser repetida. Dessa forma, é
+irá terminar, ou seja, ela não tem uma quantidade específica de vezes que ela deve ser executada. Dessa forma, é
 necessário o desenvolvedor implementar uma condição de parada desse loop, caso contrário o programa não irá parar de
-outra forma se não diretamente pelo gerenciador de tarefas ou por um `break` dentro do loop. Vamos ver como ele funciona em código.
+outro jeito se não diretamente pelo gerenciador de tarefas ou por um `break` dentro do loop.
+Vamos ver como ele funciona em código.
 
 ```python
 valor = float(input("Digite um valor entre 0 e 1: "))
@@ -629,7 +630,7 @@ except Exception as e:
         # sua execução normalmente.
         print("Divisão por 0 é indeterminada.")
 
-        
+
 # Agora vamos utilizar o else para adicionar elementos a uma lista apenas se não houver erros.
 sair = False
 while not sair:
@@ -652,17 +653,57 @@ while not sair:
     # Se o valor digitado pelo usuário fizer parte dos valores contidos na lista,
     # sair vai receber True.
     sair = input("Digite S para sair ou N para continuar.") in ['s', 'S', 'sim']
+
+# Também podemos passar diretamente o(s) tipo(s) a serem tratados no except.
+try:
+    # Algum código que possa dar erro!
+    a = float(input("Um número não vai dar erro, uma letra vai..."))
+    print("Eu posso dar erro...")
+except ValueError:
+    # Só trataremos o caso de ValueError.
+    print("Um valor incorreto foi digitado...")
+
+# No caso de tratamento de vários possíveis erros, usamos uma tuple com os problemas a serem tratados.
+try:
+    # Outro código que pode dar erro!
+    a = float(input("Letra dá erro, número não..."))
+    b = float(input("Letra dá erro, número não 2..."))
+    # Como vimos anteriormente, divisão por zero também é um problema.
+    c = a / b
+except (ValueError, ZeroDivisionError):
+    # Qualquer um desses problemas vai chamar esse except.
+    # Mas aqui não vamos saber qual dos dois foi o erro causado.
+    print("Deu erro, foi ValueError ou ZeroDivisionError")
 ```
+
+Até aqui vimos alguns tipos de erro que podem ocorrer, mas nós também podemos **levantar** nosso próprio erro e,
+dessa forma podemos fazer o tratamento necessário. Vamos ver em código como isso funciona:
+
+```python
+# Para levantar um erro é extremamente simples.
+try:
+    # raise -> levantar
+    # Chamamos Exception com o nome do erro como parâmetro e pronto.
+    raise Exception("NomeDoMeuErro")
+except Exception as e:
+    # Agora um pouco diferente dos anteriores,
+    # vamos verificar se o nome que passamos está nos argumentos de "e".
+    if "NomeDoMeuErro" in e.args:
+        print("Meu erro foi levantado...")
+```
+
+Existem outras formas de criar uma exceção, mas elas requerem o conhecimento de classes, que ainda não
+vimos. Com o que aprendemos até aqui, a maioria dos casos pode ser tratados facilmente. 
 
 ### Definindo funções em Python
 
 Para definir uma função em Python é muito simples, apenas precisamos utilizar a palavra `def` seguida pelo nome da função
-e parentesis. Assim como os loops, também é necessário adicionar `:` para indicar o começo da função, também precisamos
+e parêntesis. Assim como os loops, também é necessário adicionar `:` para indicar o começo da função, também precisamos
 lembrar que a identação em Python é essencial para identificar o escopo da função. Vamos ver em código como isso funciona:
 ```python
 # Definindo uma função que não faz nada.
 def faz_nada():  # Python não usa Camel Case para funções por convenção, ou seja, fazNada() não seria um bom nome.
-    pass  # Não faz nada, literalmente. pass é muito usado em tratamento de erros (try, catch).
+    pass  # Não faz nada, literalmente. pass é muito usado em tratamento de erros (try, except).
 
 # Agora vamos definir uma função que recebe um valor e duplica ele.
 def print_dobrador(valor):
@@ -676,12 +717,12 @@ def print_dobrador(valor):
     """
     print(valor * 2)
 
-# Agora vamos definir uma função parecida com a de cima mas com algumas coisas extras, e vamos retornar o valor final.
+# Agora vamos definir uma função parecida com a de cima, mas com algumas coisas extras, e retornar o valor final.
 def dobrador(valor: float) -> float:
     """
-    Aqui definimos que o valor que queremos é do tipo float, e que retornaremos também um float.
+    Aqui definimos que o valor que queremos é do tipo float, e retornaremos também um float.
     Isso é o que gostaríamos, porém, a função ainda recebe qualquer tipo de variável. A diferença, é que agora
-    a IDE que for usada sabe o que esperar daquela variável e além disso, será capaz de identificar potenciais erros.
+    a IDE que for usada sabe o que esperar daquela variável e, além disso, conseguirá identificar potenciais erros.
     O mesmo vale para o tipo que será retornado pela função. Só serve para ajudar a IDE e manter o programa organizado.
     """
     return valor * 2  # Retorna o valor multiplicado por 2.
@@ -699,17 +740,17 @@ def faz_nada2(valor1: int, valor2: float = 10.0, valor3: str = "Olá") -> None: 
 # Podemos passar quantidades indefinidas de variáveis também.
 def gera_polinomio(*args: float) -> str:
     """
-    Nessa função, vamos receber valores que correspondem as n constantes de um polinomio e vamos retornar uma
-    string com esse polinomio. O argumento operador * nos permite receber vários argumentos e juntá-los em uma tuple. 
+    Nessa função, vamos receber valores que correspondem as n constantes de um polinômio e vamos retornar uma
+    string com esse polinômio. O argumento operador * nos permite receber vários argumentos e juntá-los em uma tuple. 
     """
     grau = len(args) - 1  # A função len retorna o tamanho de variáveis iteráveis. (list, tuple, str, ...).
     polinomio = ""  # Inicia uma string vazia.
-    for i in range(grau, -1, -1):  # Contando do grau do polinomio até 0.
+    for i in range(grau, -1, -1):  # Contando do grau do polinômio até 0.
 
-        # Se i não for igual ao grau da função o lado esquerdo do if é retornadp.
-        # O operador += tem o mesmo funcionamento que o código a = a + b. Funciona com os outro operadores também.
+        # Se i não for igual ao grau da função o lado esquerdo do if é retornado.
+        # O operador += tem o mesmo funcionamento que o código a = a + b. Funciona com os outros operadores também.
         polinomio += f" + {args[grau - i]}X^{i}" if not i == grau else f"{args[grau - i]}X^{i}"
-    return  polinomio  # Retorna a string com o polinomio.
+    return  polinomio  # Retorna a string com o polinômio.
 
 # Também podemos receber vários pares de chave-valor usando **, mas como essa é uma introdução ao python, não iremos
 # explicar como funcionaria esse caso.
@@ -721,7 +762,7 @@ def duplica_triplica(valor: float) -> (float, float):
     """
     return valor * 2.0, valor * 3.0  # Simples assim, apenas separamos por vírgula.
 
-# Depois de definir as funções, precisamos chamá-las.
+# Após definir as funções, precisamos chamá-las.
 a = duplica_triplica(3)  # Só precisamos passar o valor necessário do argumento, se houver.
 # Nesse caso, a variável 'a' terá uma tuple com os valores (6, 9).
 # Também podemos receber o resultado de outra forma.
@@ -737,7 +778,7 @@ pouco o que é programação orientada a objeto (em Python), para isso, vamos pr
 Quando programamos em Python, nós utilizamos objetos o tempo todo, apenas não vemos isso claramente. Como
 vimos nos primeiros passos com Python, quando *printamos* na tela qual é o tipo de uma determinada variável,
 nós recebemos como resposta algo do tipo:
-```python
+```pycon
 <class 'float'>
 <class 'int'>
 <class 'str'>
@@ -771,7 +812,7 @@ class Bolo:
         são definidos praticamente da mesma forma, com a diferença que os métodos quando definidos
         sempre deverão ser inicializados com o argumento self como primeiro argumento.
         """
-        # Aqui nós armazenamos os valores passados como parâmetro nos atributos desse objeto.
+        # Aqui armazenamos os valores passados como parâmetro nos atributos desse objeto.
         # Mais uma vez, o self indica que algo é desse objeto, então self.sabor fala qual o sabor
         # desse bolo, não o de todos os bolos.
         self.sabor = sabor
@@ -793,7 +834,7 @@ criarmos um objeto novo. Agora, vamos criar métodos nessa classe.
 class Bolo:
     def __init__(self, sabor: str, ovos: int, leite: float):
         """
-        Mesma classe, só que sem os comentários.
+        Mesma classe, mas sem os comentários.
         """
         self.sabor = sabor
         self.ovos = ovos
